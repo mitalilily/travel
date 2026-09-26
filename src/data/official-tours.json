@@ -3,10 +3,38 @@
     "id": "official-238",
     "slug": "golden-triangle-tour-india",
     "name": "Golden Triangle Tour India: Delhi, Agra, Jaipur Tour",
-    "overview": "Golden Triangle Tour India: Delhi, Agra, Jaipur Tour is part of Vijay India Tours' signature collection, built around the published route: Delhi -> Agra -> Jaipur -> Delhi.",
+    "overview": "The Golden Triangle Tours India is one of the most sought-after travel circuits, connecting Delhi, Agra, and Jaipur. This tour offers travelers an unparalleled opportunity to experience India’s rich culture, majestic architecture, and fascinating history. Perfect for first-time visitors, it is a well-balanced mix of exploration and comfort, making it an unforgettable journey. Explore the Highlights of Golden Triangle Tours India The Golden Triangle Tour India brings together three iconic cities, each unique in its charm. Delhi: A bustling metropolis where ancient history meets urban vibrance. Agra: The land of the world-famous Taj Mahal, a symbol of eternal love. Jaipur: The Pink City, renowned for its royal palaces, forts, and colorful markets. Delhi: The Perfect Blend of History and Modernity Start your journey in Delhi, India’s dynamic capital city that reflects a harmonious blend of its rich past and modern advancements. Visit the awe-inspiring Qutub Minar and Humayun’s Tomb, both UNESCO World Heritage Sites. Explore the chaotic yet charming lanes of Chandni Chowk, packed with iconic eateries and vibrant bazaars. Pay homage at the serene Lotus Temple and marvel at the grandeur of India Gate. Witness the legacy of the Mughal era at Red Fort and feel the pulse of modern India at Connaught Place. Agra: Experience the Timeless Beauty of the Taj Mahal Agra is a treasure trove of Mughal architecture and culture. It is home to the iconic Taj Mahal, a masterpiece in white marble and a UNESCO World Heritage Site. Admire the intricate craftsmanship of the Taj Mahal, a breathtaking monument to love. Discover the splendor of Agra Fort, a majestic fortress with rich historical significance. Explore Fatehpur Sikri, the ghost city that was once the Mughal capital. Immerse yourself in local culture by sampling the famous Agra Petha and shopping for marble souvenirs. Jaipur: Discover the Royal Grandeur of the Pink City The final stop on your Golden Triangle journey is Jaipur, the vibrant capital of Rajasthan , known for its royal heritage and architectural wonders. Wander through the impressive Amber Fort, perched on a hilltop and offering stunning views. Snap photos at the iconic Hawa Mahal, also known as the Palace of Winds. Discover the regal charm of the City Palace, a blend of Rajasthani and Mughal architecture. Visit the astronomical marvel of Jantar Mantar, another UNESCO World Heritage Site. Don’t miss the local markets, famous for their exquisite jewelry, textiles, and handicrafts. Why Choose Golden Triangle Tours India for Your Next Adventure? Covers the most iconic destinations of India in one compact itinerary. Perfect for history buffs, architecture enthusiasts, and culture seekers. Available in customizable packages to suit different preferences and budgets. Offers a deep dive into India’s diverse traditions, cuisines, and heritage. Customized Golden Triangle Tour Packages for Every Traveler Whether you’re traveling solo, as a couple, or with family, Golden Triangle Tours India offers packages tailored to your needs. Choose from luxury options, budget-friendly tours, or specialized itineraries that include additional destinations like Varanasi or Ranthambore for a tiger safari adventure. Embark on the Golden Triangle Tour India to witness the essence of India’s history, culture, and magnificence. Book now to create memories that will last a lifetime!",
     "plan": "Delhi -> Agra -> Jaipur -> Delhi",
     "dayCount": 5,
-    "highlights": "Experience the wonder TAJ MAHAL Shop the way locals do Eat street (only if you can handle it, try well-cooked",
+    "days": [
+      {
+        "day": 1,
+        "place": "Starting at Delhi go around the monuments and temples of a different faith",
+        "description": "Starting at Delhi go around the monuments and temples of a different faith, beginning with the Qutub Minar complex, and then to the Gurudwara Bangla Saheb and its community service kitchen. Walk around Connaught Place the bustling markets of Delhi. An evening visit to the Secretariat and the parliament drive with a visit to India Gate the war memorial."
+      },
+      {
+        "day": 2,
+        "place": "Early morning leave for Agra via the Akshardham Temple an amazing",
+        "description": "Early morning leave for Agra via the Akshardham Temple an amazing, vast, and newly built Temple in Noida, Check in Hotel at Agra and relax for the evening to visit the Red Fort Agra and the Mehtab Bagh to take a glimpse of the Taj Mahal from across the River in the Royal Garden Mehtab Bagh."
+      },
+      {
+        "day": 3,
+        "place": "Visit the Taj Mahal the highlight of Golden Triangle India and indulge in its beauty and romance with the rising sun",
+        "description": "Visit the Taj Mahal the highlight of Golden Triangle India and indulge in its beauty and romance with the rising sun. Go around and shop in Agra before leaving for Jaipur, On the way visit Fatehpur Sikri the golden period home of the Mughals, which was not lived for long due to scarcity of water. Continuing to Jaipur. Rest"
+      },
+      {
+        "day": 4,
+        "place": "The Amber Fort was built by great rulers of Jaipur who were the generals to the Mughals and gathered immense wealth from their wars",
+        "description": "The Amber Fort was built by great rulers of Jaipur who were the generals to the Mughals and gathered immense wealth from their wars. Then to the Jaigarh Fort which showcases one of the largest cannon and a Royal arch. Not to miss the photoshoots at Jal Mahal and Hawa Mahal the place of water and wind respectively. Visit the City Palace Museum showcasing the history of the Jaipur Rulers and the Jantar Mantar Observatory. Shop around the Jeweller's market or the cloth market in the walled region. Optional cooking lesson followed by dinner with an Indian family."
+      },
+      {
+        "day": 5,
+        "place": "See the Statue Circle and the Albert Hall museum made by British architecture and an optional visit to a zoo",
+        "description": "See the Statue Circle and the Albert Hall museum made by British architecture and an optional visit to a zoo. An early morning visit to some luxury shops before you leave the city. Taste the Jaipur Food before you go to Delhi, for the further journey."
+      }
+    ],
+    "highlights": "Experience the wonder TAJ MAHAL Shop the way locals do Eat street (only if you can handle it, try well-cooked food only) Learn cooking and enjoy dinner with an Indian Family",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/02/new-crop_2-min.jpg",
     "price": 1200,
     "sourceUrl": "https://vijayindiatours.com/tours/golden-triangle-tour-india/"
   },
@@ -14,10 +42,48 @@
     "id": "official-252",
     "slug": "shekhawati-tour-with-golden-triangle",
     "name": "Shekhawati tour with golden triangle",
-    "overview": "Shekhawati tour with golden triangle is part of Vijay India Tours' signature collection, built around the published route: Delhi -> Agra -> Jaipur -> Shekhawati -> Delhi.",
+    "overview": "India is not just about the Golden Triangle, our Shekhawati tour with golden triangle captures the essence of India in the three cities of Delhi, Agra, and Jaipur which houses the world-famous monument Taj Mahal, the Qutub Minar, and the Lotus Temple, UNESCO site Amber Fort . These cities are a must-visit on your first tour of India and besides the famed Golden Triangle circuit explore the majestic haveli’s in the small towns of the Shekhawat region. Explore the ways of living in the rural and smaller places which give you a deep insight into the lifestyle of 70% of the population of the country which still is not connected to metros and cities. Shekhawati is a region covering nearly three districts of Rajasthan, it was named after Rao Sheikha who once ruled the region and later followed by his Generations. Legend has it that Rao Shekha was born by the blessing of a Sufi saint and in honor, he was named Shekha, and his descendants were called Shekhawat. The region has a number of small forts some of which are converted into hotels, and the most interesting piece is the Shekhawati Haveli’s studded by fresco paintings depicting the scenes of Ramayana- Mahabharata the ancients texts of India to figures of god and goddesses, and also the nobilities of the rulers, to the latest English armies along with describing the general living of the people in the region. These haveli’s of Shekhawati give a brief about India’s past present up to the 20th century in the form of paintings on the walls of these beautiful Haveli’s. The Shekhawati Haveli’s were built by the rich merchants of the region who went out to work and when they earned enough came back and made these grand mansions for their families who they left behind. Along with the Haveli’s the region gives a glimpse of the rural or semi-urban town. Immerse in the colors of India in this beautiful region. Learn about our Shekhawati tour with golden triangle from traveler reviews . Travel Route var Locationsidt = [{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_a.png\",},{ lat: 28.2016, lon: 75.0465, title: \"Mahansar\", html: \" Mahansar \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_b.png\",},{ lat: 26.9124336, lon: 75.78727090000007, title: \"Jaipur\", html: \" Jaipur \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_c.png\",},{ lat: 27.1767, lon: 78.0081, title: \"Agra\", html: \" Agra \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_d.png\",},{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_a.png\",},];var $ugmincptv = jQuery.noConflict(); $ugmincptv(function() { new Maplace({ map_div: \"#googlemap\", visualRefresh: true,locations: Locationsidt,type: \"polyline\", generate_controls: true, controls_on_map: true, controls_type: \"dropdown\", controls_title: \"Controls\", view_all: true, view_all_text: \"View all points\", show_markers: true, show_infowindows: true,map_options: {scrollwheel: true,mapTypeId: google.maps.MapTypeId.ROADMAP, },}).Load(); });",
     "plan": "Delhi -> Agra -> Jaipur -> Shekhawati -> Delhi",
     "dayCount": 7,
-    "highlights": "Ride a Rickshaw i.e man powered vehicles. Visit to the various Religious place and learn about them. Shopping across the",
+    "days": [
+      {
+        "day": 1,
+        "place": "Delhi - The day you arrive in India loosen yourself and relax and start off with a drive across the city's prominent building the place from where India is administered and operated by the parliament and the buildings of the British Raj",
+        "description": "Delhi - The day you arrive in India loosen yourself and relax and start off with a drive across the city's prominent building the place from where India is administered and operated by the parliament and the buildings of the British Raj. The India Gate and the go around the busy streets of Delhi."
+      },
+      {
+        "day": 2,
+        "place": "Today we will be going through the past of India visiting the major buildings of the Mughal era like the Jama Masjid",
+        "description": "Today we will be going through the past of India visiting the major buildings of the Mughal era like the Jama Masjid, and Qutub Minar the tallest bricked of bricks. Then visit the lotus temple and the Gurudwara Bangla Saheb which shows the devotion to community service by the Sikhs. After lunch leave for Agra visiting the Akshardham Temple. Reach Agra refresh and continue to the Mehtab Bagh - the garden across the river from where one can see the Taj Mahal under the setting sun."
+      },
+      {
+        "day": 3,
+        "place": "Visit the Taj early in the morning at 6:00 Am when the gates open and immerse yourself in romance with the 7th wonder of the Ancient World the rarest piece of Art in Marble the Taj Mahal",
+        "description": "Visit the Taj early in the morning at 6:00 Am when the gates open and immerse yourself in romance with the 7th wonder of the Ancient World the rarest piece of Art in Marble the Taj Mahal. Take your time in observing the place go around the building, and learn about it and it will be the experience of a lifetime. After the Taj Mahal, we go around for Lunch and a shopping experience at Agra. Leave for Jaipur, and visit the Majestic Red Fort in Fatehpur Sikri which was made by Mughal Emperor Akbar the Great in order to respect a saint who blessed him with his son Jahangir. It was once the ruling ground for India and later was abandoned because of scarcity of water not to miss the mosque of Sheikh Salim Chisti. Start to Jaipur once at the hotel relax."
+      },
+      {
+        "day": 4,
+        "place": "Start your day with the view of Jal Mahal a palace in a lake and continue to the Amber Fort which was the place of the Rajput Rulers of Jaipur",
+        "description": "Start your day with the view of Jal Mahal a palace in a lake and continue to the Amber Fort which was the place of the Rajput Rulers of Jaipur. A great fort built by the Rajputs as they were the general for the Mughal armies and had gathered immense wealth from the states the Mughals captured, it is seen in the Palace of Mirrors and the surroundings. Then visit the gaiters the memorials of Rajput Kings of Jaipur with beautiful stone carvings as delicately and gently done it's worth a visit. Visit the Jantar Mantar the solar observatory of the past which was as precise to 2 seconds per day. View the Hawa Mahal from outside or have a coffee at the best roof-top cafe opposite the Hawa Mahal. Relax yourself after a tiring day in your comfortable room tomorrow we are going local."
+      },
+      {
+        "day": 5,
+        "place": "HaHa like the local women's do get lost in the pink city Market and shop your heart",
+        "description": "HaHa like the local women's do get lost in the pink city Market and shop your heart, explore the women of the city their style, and costumes. Go to the cloth market or the study books market or the Jewelry market. The jewellery and gems of Jaipur are famous making it a shopper's Paradise. Check in for lunch at some cozy place and book the tickets for the Best cinema hall made by one of the businessmen of Jaipur \"The RAJ Mandir\". There aren't any subtitles but the interior of the hall is amazing and you can get an insight into Bollywood. Optional the Galta Temple or the Monkey Temple ."
+      },
+      {
+        "day": 6,
+        "place": "Start early morning to Shekhawati India and visit the haveli's in Mandawa to check their paintings and some more on the way to your Fort Hotel",
+        "description": "Start early morning to Shekhawati India and visit the haveli's in Mandawa to check their paintings and some more on the way to your Fort Hotel. These Havelis are like photographs of India past on the wall. See and observe the great work of artists and then to your hotel. Relax and visit the best work of gold in a painting also called the shop of gold. Once the Headquarters of a Merchant Family. Enjoy a village walk."
+      },
+      {
+        "day": 7,
+        "place": "Check out 5 hours before your reporting time in Delhi and start your journey beyond",
+        "description": "Check out 5 hours before your reporting time in Delhi and start your journey beyond. Hope you taking back great memories you won't forget."
+      }
+    ],
+    "highlights": "Ride a Rickshaw i.e man powered vehicles. Visit to the various Religious place and learn about them. Shopping across the local markets of Jaipur. Walk across the village of India to learn about the life and lifestyles of the villagers. Experience the animals across the cities and streets. A bollywood Film at the best of Cinema Halls of India.",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/08/DSC_0873.gif",
     "price": 1500,
     "sourceUrl": "https://vijayindiatours.com/tours/shekhawati-tour-with-golden-triangle/"
   },
@@ -25,10 +91,83 @@
     "id": "official-280",
     "slug": "indian-saga",
     "name": "Indian Saga",
-    "overview": "Indian Saga is part of Vijay India Tours' signature collection, built around the published route: Delhi ->Agra -> Village -> Ranthambore -> Jaipur -> Varanasi -> Delhi.",
+    "overview": "Indian Saga takes you through bustling capital of India with a fascinating history, home to nearly 19 million people from all parts of the nation. Catch the glimpse of the Taj Mahal changing colors with the rising sun and experience the rich history, cuisines, and culture of the city which attracts visitors from across the globe. Experience life in an Indian village and walk among the dusty streets exchanging smiles with the locals. Continue to the regal state of Rajasthan which is home to beautiful palaces and forts along with them the old hunting grounds of the Jaipur royals which are now transformed into a wildlife reserve for the conservation of the endangered species the Royal Bengal Tigers which are only found in India, the park at the moment has more than 60 tigers in an open environment. These grounds once belonged to the royal family of Jaipur and here the prince and kings used to visit for hunting tigers which was the main cause of depletion of these magnificent cats. UNESCO World Heritage city of Jaipur has a lot to offer from the maintained City palace which has beautiful painting and decorations and armory then to the Amber Fort and the famous Monkey Temple. Varanasi, a city of more than a thousand temples and shrines and sacred to Hindus and Buddhists alike this city has been a cultural and religious center in North India for several thousand years and one of the oldest continuously inhabited city. As Mark Twain said, &#8220;Benares is older than history, older than tradition, older even than legend, and look twice as old as all them put together.&#8221; Indulge in the experiencing of aarti ceremony – a Hindu religious ritual of worship in which oil lamps are offered to one or more deities – on the banks of Ganges at sunrise and sunset listening to the saga of saints and Sadhus. And take a tour of Sarnath, which symbolizes the birth of Buddhism with sculptures dating back as far as the 3rd Century BC. &nbsp; Travel Route var Locationsidt = [{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 27.1766701, lon: 78.00807450000002, title: \"Agra\", html: \" Agra \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.4883, lon: 77.0161, title: \"Village\", html: \" Village \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.0173, lon: 76.5026, title: \"Ranthambore\", html: \" Ranthambore \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.9124336, lon: 75.78727090000007, title: \"Jaipur\", html: \" Jaipur \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 25.3176, lon: 82.9739, title: \"Varansi\", html: \" Varansi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},];var $ugmincptv = jQuery.noConflict(); $ugmincptv(function() { new Maplace({ map_div: \"#googlemap\", visualRefresh: true,locations: Locationsidt,type: \"polyline\", generate_controls: true, controls_on_map: true, controls_type: \"dropdown\", controls_title: \"Controls\", view_all: true, view_all_text: \"View all points\", show_markers: true, show_infowindows: true,map_options: {scrollwheel: true,mapTypeId: google.maps.MapTypeId.ROADMAP, },}).Load(); }); &nbsp;",
     "plan": "Delhi ->Agra -> Village -> Ranthambore -> Jaipur -> Varanasi -> Delhi",
     "dayCount": 14,
-    "highlights": "Home-cooked food and interaction with a family in Jaipur. Experience of the Royal Bengal Tiger into the wilderness. Boat Ride",
+    "days": [
+      {
+        "day": 1,
+        "place": "Delhi Meet and greet at the airport and received by our Tour Manager",
+        "description": "Delhi Meet and greet at the airport and received by our Tour Manager. Check-in at hotel and night to Leisure."
+      },
+      {
+        "day": 2,
+        "place": "Delhi After breakfast",
+        "description": "Delhi After breakfast, we indulge in a half day tour of Old Delhi starting at the Raj Ghat, a memorial built in memory of Mahatma Gandhi, the father of the nation. Then to the Jama Masjid the biggest mosque in India. And drive past the imposing Red Fort. In the evening drive through Lutyens Delhi to explore the masterpieces of British Architecture. Stopping over at India Gate."
+      },
+      {
+        "day": 3,
+        "place": "Delhi - Agra After breakfast leave for Agra via the Yamuna Expressway",
+        "description": "Delhi - Agra After breakfast leave for Agra via the Yamuna Expressway. Reaching Agra by lunch and relax. In the evening view the Taj from the royal gardens the Mehtab Bagh which is said to be the proposed site for the Black Taj Mahal which could have been meant for the great Emperor Jahangir. Watch the Taj from across the river. Night at Leisure. Hotel: DoubleTree by Hilton"
+      },
+      {
+        "day": 4,
+        "place": "Agra Early morning visit to the Taj Mahal - the epitome of love and the greatest romance depicted in architecture",
+        "description": "Agra Early morning visit to the Taj Mahal - the epitome of love and the greatest romance depicted in architecture. Return to hotel for breakfast and later in the day we visit the imposing Red Fort, an outstanding example of Mughal architecture and the seat and stronghold of Mughal Empire. Night at leisure."
+      },
+      {
+        "day": 5,
+        "place": "Agra - Village Leave early morning for your next stay at Heritage hotel in Village",
+        "description": "Agra - Village Leave early morning for your next stay at Heritage hotel in Village. Stopping over at Fatehpur Sikri, Mughal city commissioned by Emperor Akbar in honor of the saint who blessed him with a successor. But due to the scarcity of water, this incredible city was abandoned.Take a walk around the village to learn about the way of life in the Indian Villages night at leisure."
+      },
+      {
+        "day": 6,
+        "place": "Village - Ranthambore Take a walk around the village to learn about the way of life in the Indian Villages in morning day at leisure",
+        "description": "Village - Ranthambore Take a walk around the village to learn about the way of life in the Indian Villages in morning day at leisure. Leave for Ranthambore by afternoon and reach by evening. Relax at your cozy Wildlife Retreat."
+      },
+      {
+        "day": 7,
+        "place": "Ranthambore Indulge in game drives today at the Ranthambore National park",
+        "description": "Ranthambore Indulge in game drives today at the Ranthambore National park, an absolute mosaic of the lush, green forests, opaque Jade waters and tawny, open plains peppered with bare trees. Optional Visit to the hilltop temple of Lord Ganesh in the Tiger Reserve from where one can have a birds-eye view of the Park. Night at leisure."
+      },
+      {
+        "day": 8,
+        "place": "Ranthambore - Jaipur Leave early morning for Jaipur the famed pink city",
+        "description": "Ranthambore - Jaipur Leave early morning for Jaipur the famed pink city. Reach Jaipur by evening and transfer to hotel. Night at Leisure"
+      },
+      {
+        "day": 9,
+        "place": "Jaipur Today start the day by seeking the blessing and indulge in spirituality with the locals dancing and singing at Govind Dev Ji temple",
+        "description": "Jaipur Today start the day by seeking the blessing and indulge in spirituality with the locals dancing and singing at Govind Dev Ji temple. Visit the Jantar Mantar, a one of its kind astronomical observatory dating back to 1734. Explore Jaipur’s spectacular city palace, a unique and arresting complex of palaces, pavilions, gardens, and temples. Take a stroll through the monumental gateway of the ornate City Palace. Back to the hotel and day at leisure."
+      },
+      {
+        "day": 10,
+        "place": "Jaipur Start off your day from UNESCO World Heritage site the Amer fort",
+        "description": "Jaipur Start off your day from UNESCO World Heritage site the Amer fort. And visit the Nahargarh Fort which boasts of one of the largest cannons. On your way back visit the Royal Gators. Evening visits the bustling bazaars of Jaipur filled with a wide variety of fabric, handicrafts, and jewelry."
+      },
+      {
+        "day": 11,
+        "place": "Jaipur - Varanasi After breakfast leave for Varanasi by air",
+        "description": "Jaipur - Varanasi After breakfast leave for Varanasi by air. Check-in at the hotel and relax for the day and later in the evening indulge in the Prayers (Arti) from boats at the ghats of the River Ganges. Varanasi India's most sacred city which has been a center of knowledge and continuously inhabited for more than 5000 years is a city famed for the ghats(banks) of River Ganges."
+      },
+      {
+        "day": 12,
+        "place": "Varanasi - Sarnath - Varanasi After Breakfast",
+        "description": "Varanasi - Sarnath - Varanasi After Breakfast, we leave for Sarnath a holy place for the Buddhists as it was where Buddha gave his first sermon. Immerse yourself into the teachings of Buddha, written all over the place. And explore the stupas and park and watch the Buddhist pilgrims paying visit one of the holy places in Buddhism. Return to your hotel in Varanasi. Night at leisure."
+      },
+      {
+        "day": 13,
+        "place": "Varanasi - Delhi After Breakfast",
+        "description": "Varanasi - Delhi After Breakfast, we leave New Delhi by air. Reach Delhi Check-in at Hotel and day at leisure."
+      },
+      {
+        "day": 14,
+        "place": "Delhi Airport Departure Breakfast and check-out from the hotel for your flight back home",
+        "description": "Delhi Airport Departure Breakfast and check-out from the hotel for your flight back home."
+      }
+    ],
+    "highlights": "Home-cooked food and interaction with a family in Jaipur. Experience of the Royal Bengal Tiger into the wilderness. Boat Ride in River Ganges Get a sense of life in an Indian Village. Shop your heart in cheap local markets.",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/03/new-crop_5-min-1.jpg",
     "price": 2200,
     "sourceUrl": "https://vijayindiatours.com/tours/indian-saga/"
   },
@@ -36,10 +175,58 @@
     "id": "official-282",
     "slug": "thar-desert-tour",
     "name": "Thar desert tour",
-    "overview": "Thar desert tour is part of Vijay India Tours' signature collection, built around the published route: Delhi -> Shekhawati -> Bikaner -> Jaisalmer -> Jodhpur -> Jaipur -> Delhi.",
+    "overview": "Explore the best of western Rajasthan on our Thar desert Tour, situated on the west the Thar desert cover mainly the districts of Jodhpur, Jaisalmer, and Bikaner which lies to the east of the Aravali mountain ranges which prevents the rainfall from reaching the region. Living amid the western part of Rajasthan was hard in the earlier times, with low agricultural productivity and only a few vegetation grown Thar desert provided rough-tough conditioning to make a living. The great rulers of these former princely states have survived themselves and even made their great contributions to transform these states by constructing grand lakes to maintain a year-long water supply, incredible palaces, and forts, and other architectural marvels thus bringing life to these far off regions. The sand dunes are a perfect place to stay at night among the desert and enjoy a camel ride cause camels are the ship of the deserts and were tamed and trained for transportation of men and goods through the deserted regions. Bikaner’s Junagarh Fort has a rare collection of weapons and things from the past at display which makes it worth visiting. Almost 30Km from Bikaner is the most bizarre place in the world – Rat Temple India. Visit Jodhpur’s Mehrangarh fort made with fine carvings and situated atop a hill with long walls to prevent enemy attacks on your Thar desert tour. The magnificent blue colored city is visible to the west of the fort, these blue homes houses the people working in the fort and are blue to escape the scorching heat. Don’t miss the incredible marble cenotaphs Jaswant Thada nearby on your western Rajasthan Tour. Jaisalmer is the extreme western part of rajasthan. This rigid desert city was confined to the premises of the Golden fort in earlier times, the fort is golden in color and camouflage with the sands. The Gadi Sagar lake built in to supply water to the people is like a heaven for the city. Travel Route var Locationsidt = [{ lat: 28.0229, lon: 73.3119, title: \"Bikaner\", html: \" Bikaner \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_Bikaner.png\",},{ lat: 26.9157, lon: 70.9083, title: \"Jaisalmer\", html: \" Jaisalmer \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_Jaisalmer.png\",},{ lat: 26.2389, lon: 73.0243, title: \"Jodhpur\", html: \" Jodhpur \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_c.png\",},];var $ugmincptv = jQuery.noConflict(); $ugmincptv(function() { new Maplace({ map_div: \"#googlemap\", visualRefresh: true,locations: Locationsidt,type: \"polyline\", generate_controls: true, controls_on_map: true, controls_type: \"dropdown\", controls_title: \"Controls\", view_all: true, view_all_text: \"View all points\", show_markers: true, show_infowindows: true,map_options: {scrollwheel: true,mapTypeId: google.maps.MapTypeId.ROADMAP, },}).Load(); });",
     "plan": "Delhi -> Shekhawati -> Bikaner -> Jaisalmer -> Jodhpur -> Jaipur -> Delhi",
     "dayCount": 9,
+    "days": [
+      {
+        "day": 1,
+        "place": "Start with the national Capital and go around the temples and the prominent buildings of the government",
+        "description": "Start with the national Capital and go around the temples and the prominent buildings of the government. Visit the monument Qutub Minar and the optional Red Fort as there are more Red forts you can explore the Mughal-inspired Red Fort Agra which is a better choice. End the day with a walk around Connaught Place and the busy streets of Delhi."
+      },
+      {
+        "day": 2,
+        "place": "Leave for Shekhawati and visit the Famous Havelis to get a glimpse of the history and past painted on walls of the haveli's of Shekhawati India which were built by the rich merchants of the region who travelled to different regions of the country and prospered in their business",
+        "description": "Leave for Shekhawati and visit the Famous Havelis to get a glimpse of the history and past painted on walls of the haveli's of Shekhawati India which were built by the rich merchants of the region who travelled to different regions of the country and prospered in their business, all these riches were used up in building great painted Haveli's or Mansions with an open area in centre and surrounded by rooms on other sides, these walls of shekhawati are painted by figure's of Gods and Godesses, Kings and queens, picturising the processions and festivals that were celebrated in the state and many more aspects of the Rajasthan. Leave for Bikaner."
+      },
+      {
+        "day": 3,
+        "place": "Bikaner is a city in the desert well covered by sand dunes on all sides",
+        "description": "Bikaner is a city in the desert well covered by sand dunes on all sides. Bikaner boasts the Junagarh Fort which has the largest collection of Artillery and things from the past which makes it worth visiting, unlike the other forts which are mostly vacant inside except the Mehrangarh Fort in Jodhpur. After lunch visit the other major attraction near Bikaner the Deshnok Temple which is famous across the globe as the rat temple, which is believed to be the favourite animal of the goddess and is well treated and free to roam in the temple. The rats also eat the sweet offerings which are then served to the followers and to date, no record of any rat-infected disease has been found. Faith and Belief prevail in India. Take an evening take tour of the camel to experience the ship of the desert. overnight at the hotel and pack your stuff to experience the Golden City."
+      },
+      {
+        "day": 4,
+        "place": "Early morning after breakfast leave for Golden City Jaisalmer and check in at your hotel",
+        "description": "Early morning after breakfast leave for Golden City Jaisalmer and check in at your hotel. Evening at leisure with a cultural dance show awaiting."
+      },
+      {
+        "day": 5,
+        "place": "Today explore the Golden coloured Fort of Jaisalmer which is a living Fort with more than 3000 residents",
+        "description": "Today explore the Golden coloured Fort of Jaisalmer which is a living Fort with more than 3000 residents. The Fort features delicate work of carvings which can be seen on almost every inch from windows to pillars and balconies each place is decorated. The Fort complex has restaurants and shops since its a living fort so you can enjoy lunch at the Jaisalmer Fort. Later we go on a jeep/camel safari in the desert."
+      },
+      {
+        "day": 6,
+        "place": "Start on your journey to Jodhpur the \"Blue City\" you will realize the name when you reach there",
+        "description": "Start on your journey to Jodhpur the \"Blue City\" you will realize the name when you reach there. Relax in the afternoon, before we head to the Mehrangarh Fort and Palace which is situated on a rocky hill overlooking the city of Jodhpur which when viewed from the fort seems to be painted blue. Also, visit the Jaswant Thada cenotaph made of white marble with artistic decorations."
+      },
+      {
+        "day": 7,
+        "place": "Leave for Jaipur",
+        "description": "Leave for Jaipur. In the evening visit the Amber Fort by night. And drive through the city. Night at leisure."
+      },
+      {
+        "day": 8,
+        "place": "Start the sightseeing with Hawa Mahal or the honeycomb maze structure",
+        "description": "Start the sightseeing with Hawa Mahal or the honeycomb maze structure, then to the Jantar Mantar a one of its kind open-air observatory. Walk to the City Palace right beside the Jantar Mantar along with the temple of Govind Dev Ji. Lunch at hotel, and evening to explore the local bazaars or to the Gaitors which were erected in memory of the former Rulers of Jaipur."
+      },
+      {
+        "day": 9,
+        "place": "Time to bid a bye as you continue to Delhi",
+        "description": "Time to bid a bye as you continue to Delhi."
+      }
+    ],
     "highlights": "Delhi -> Shekhawati -> Bikaner -> Jaisalmer -> Osian -> Jodhpur -> Jaipur -> Delhi 11 Night - 12 Days",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/03/new-crop_2-min.jpg",
     "price": 899,
     "sourceUrl": "https://vijayindiatours.com/tours/thar-desert-tour/"
   },
@@ -47,10 +234,53 @@
     "id": "official-284",
     "slug": "tajmahal-india-tours",
     "name": "Taj Mahal India Tour Packages: Explore the Majestic Symbol of Love in India",
-    "overview": "Taj Mahal India Tour Packages: Explore the Majestic Symbol of Love in India is part of Vijay India Tours' signature collection, built around the published route: Delhi - Agra - Jaipur - Cittorgarh - Udaipur - Delhi.",
+    "overview": "Taj Mahal India Tours: Explore the Timeless Beauty of India’s Famous Landmark The Taj Mahal , one of the Seven Wonders of the World, is a breathtaking symbol of love, grandeur, and architectural brilliance. Located in the city of Agra , India, this iconic white marble mausoleum attracts millions of visitors each year. For those seeking to experience the wonder of this majestic monument, Taj Mahal Tour Packages provide the perfect way to explore its beauty and history. At Vijay India Tours, we offer carefully curated Taj Mahal India Tour packages that not only cover this world-renowned monument but also take you on a journey through the rich culture and heritage of Agra and beyond. Whether you’re a history enthusiast, a romantic traveler, or simply looking to experience India’s most iconic landmark, our Taj Mahal Tour packages are designed to make your visit memorable and hassle-free. Why Visit the Taj Mahal? The Taj Mahal stands as a timeless tribute to love, built by Mughal Emperor Shah Jahan in memory of his beloved wife Mumtaz Mahal. Known for its intricate marble inlay work, beautiful gardens, and stunning architecture, the Taj Mahal is a masterpiece that represents the peak of Mughal art and design. The monument is not only an architectural wonder but also a symbol of eternal love, making it an essential stop for any traveler visiting India. Here are a few reasons why a visit to the Taj Mahal should be on your travel bucket list: Architectural Beauty : The Taj Mahal is a stunning example of Mughal architecture, blending Persian, Ottoman Turkish, and Indian styles. Its symmetry, marble carvings, and intricate detailing leave visitors in awe. Cultural Significance : The Taj Mahal is a UNESCO World Heritage site and is one of the most recognizable structures in the world. A visit here offers a glimpse into India’s rich history and royal heritage. Romantic Experience : Known as a symbol of eternal love, the Taj Mahal provides a romantic atmosphere, making it a favorite destination for honeymooners and couples. What’s Included in Our Taj Mahal Tour Packages? Our Taj Mahal India Tour Packages are designed to offer you a comprehensive and enriching experience. Here’s what you can expect: Guided Tour of the Taj Mahal Every Taj Mahal India Tour package includes a guided tour of the Taj Mahal, where our expert guides will share the fascinating history and stories behind the monument. Learn about the love story of Shah Jahan and Mumtaz Mahal, the construction of the Taj, and the intricate architectural details that make it a masterpiece. Visit to Agra Fort Most of our Agra Tour Packages include a visit to Agra Fort, a UNESCO World Heritage site. Located just a few kilometers from the Taj Mahal, Agra Fort was once the residence of the Mughal emperors. It offers panoramic views of the Taj Mahal from its ramparts and provides a glimpse into the royal lifestyle of the Mughal era. Sunset View from Mehtab Bagh For a truly unforgettable experience, our packages often include a visit to Mehtab Bagh, a garden located across the Yamuna River from the Taj Mahal. This peaceful location offers stunning views of the Taj Mahal, especially at sunset when the monument is bathed in a golden glow. It’s the perfect spot for photography and reflection. Comfortable Transportation We understand that comfort is important during your travels, so our Taj Mahal Tour Packages include comfortable transportation. Whether you’re traveling by air-conditioned car, train, or bus, our services ensure that you travel in comfort and style throughout your journey. Customizable Itineraries At Vijay India Tours, we offer flexibility in our packages. Whether you’re looking for a quick day trip to Agra or a more extensive tour of nearby attractions, we can customize your itinerary based on your preferences and schedule. Explore More with Our Agra Tour Packages While the Taj Mahal is the star attraction in Agra, the city has many other incredible sites worth exploring. Our Agra Tour Packages often include visits to: Fatehpur Sikri : A former Mughal capital, this UNESCO World Heritage site is home to stunning structures like Buland Darwaza and Jama Masjid. Itmad-ud-Daula’s Tomb : Often referred to as the &#8220;Baby Taj,&#8221; this beautiful tomb is an architectural gem and a precursor to the Taj Mahal’s design. Local Markets : Agra is known for its handicrafts, including marble inlay work, carpets, and leather goods. Explore the bustling markets and take home some authentic souvenirs. Why Choose Vijay India Tours? At Vijay India Tours , we are committed to providing you with an unforgettable experience. Here’s why our Taj Mahal Tour packages stand out: Expert Guides : Our knowledgeable and friendly guides ensure that you get the most out of your visit to the Taj Mahal, sharing rich historical insights and interesting anecdotes. Comfortable Travel : With our top-quality transport options, we ensure that your trip is smooth and comfortable, allowing you to focus on the beauty and history around you. Customizable Packages : We offer flexible tour packages that can be tailored to your preferences, whether you’re on a tight schedule or want to explore more of Agra. Hassle-Free Booking : Booking your Taj Mahal India Tour with Vijay India Tours is simple and convenient. We handle all the details, so you can relax and enjoy your journey. Book Your Taj Mahal India Tour Today! The Taj Mahal is more than just a monument; it’s an experience that stays with you forever. Whether you’re visiting India for the first time or returning to explore more of its beauty, our Taj Mahal Tour Packages provide the perfect way to explore this iconic symbol of love and its surroundings. Travel Route var Locationsidt = [{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 27.1766701, lon: 78.00807450000002, title: \"Agra\", html: \" Agra \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.9124336, lon: 75.78727090000007, title: \"Jaipur\", html: \" Jaipur \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 24.5854, lon: 73.7125, title: \"Udaipur\", html: \" Udaipur \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},];var $ugmincptv = jQuery.noConflict(); $ugmincptv(function() { new Maplace({ map_div: \"#googlemap\", visualRefresh: true,locations: Locationsidt,type: \"polyline\", generate_controls: true, controls_on_map: true, controls_type: \"dropdown\", controls_title: \"Controls\", view_all: true, view_all_text: \"View all points\", show_markers: true, show_infowindows: true,map_options: {scrollwheel: true,mapTypeId: google.maps.MapTypeId.ROADMAP, },}).Load(); });",
     "plan": "Delhi - Agra - Jaipur - Cittorgarh - Udaipur - Delhi",
     "dayCount": 8,
-    "highlights": "Visit to the offbeat and charming Chittorgarh Jaipur Markets exploration. See to believe one of the biggest cannon of the",
+    "days": [
+      {
+        "day": 1,
+        "place": "Start with the national Capital go around the temples and the prominent buildings of the government",
+        "description": "Start with the national Capital go around the temples and the prominent buildings of the government. Visit the monument Qutub Minar and the optional Ref Fort as there are more Red forts you can explore one at Agra which is a better choice. End the day with a walk around Connaught place and the busy streets of Delhi."
+      },
+      {
+        "day": 2,
+        "place": "Pack up and leave for Agra along with a visit to the Akshardham temple at Noida few km's from Delhi",
+        "description": "Pack up and leave for Agra along with a visit to the Akshardham temple at Noida few km's from Delhi. Enjoy the meals at the only midway on the best highway of India Delhi-Agra Expressway. Reach Agra and relax at the hotel and the choice is yours to visit the Taj at sunset today or sunrise tomorrow as these are the best of times. Back to the hotel at your leisure or shop around in Agra."
+      },
+      {
+        "day": 3,
+        "place": "In the morning visit the monument Red Fort",
+        "description": "In the morning visit the monument Red Fort, the Red Fort of Agra which was once the centre of the Mughals, when they were at their peak. Also, visit the Baby Taj during the day. Afternoon at Leisure, and then in the evening visit the Taj Mahal at sunset to watch the white walls changing hue as the skies change. Feeling the love and passion of Shah-Jahan for Mumtaz Mahal."
+      },
+      {
+        "day": 4,
+        "place": "Start on your journey to Jaipur visiting Fatehpur Sikri on the way",
+        "description": "Start on your journey to Jaipur visiting Fatehpur Sikri on the way. Reaching Jaipur by evening you can enjoy the city markets, a riot of colors amid the Pink City by a rickshaw i.e man powered chariot, or by tuk-tuk. Go around and catch a sneak of the city's monuments watching them illuminated at night. Dinner at the hotel and relax."
+      },
+      {
+        "day": 5,
+        "place": "Visit the majestic Amer Fort in the morning on the back of an elephant",
+        "description": "Visit the majestic Amer Fort in the morning on the back of an elephant, and on the way back get some photographs of the Jal Mahal or the lake palace, optional visit to the Gaitors the memorials of the Kings. Then to the Jantar Mantar observatory. Optional visits to City Palace Jaipur and the Jaigarh Fort which boast of having the biggest Cannon. Shop around for souvenirs and drive past the state assembly the war memorial and the Statue Circle."
+      },
+      {
+        "day": 6,
+        "place": "Start for the city of Lakes on the way visit the most inspiring and tell-a-tale fort which is now left abandoned in ruins the Chittorgarh Fort - One of the greatest of Forts in India",
+        "description": "Start for the city of Lakes on the way visit the most inspiring and tell-a-tale fort which is now left abandoned in ruins the Chittorgarh Fort - One of the greatest of Forts in India, the former capital of Mewar it consists of temples, a museum and palace complex along with the famed Vijay Stambh or the victory tower built in 1448 and one can visit the top to capture the birds eye views of Chittorgarh. Continue for your onward journey to Udaipur. Night at the hotel in Udaipur."
+      },
+      {
+        "day": 7,
+        "place": "Start with a boat ride in Lake Pichola and a visit to the best of Palace the City Palace Udaipur",
+        "description": "Start with a boat ride in Lake Pichola and a visit to the best of Palace the City Palace Udaipur. Have lunch and continue to the Friends Palace, or the beautiful Gardens meant for the queen and her friends, drive through the other lakes and do not miss the Gulab Bagh the green avenue of Udaipur. If Interested visit the Sahastra Bahu Temple few km from Udaipur and the EklingJii temple a few extra miles away. In the evening enjoy a Rajasthani folk dance and music show along with your dinner. Have a great night."
+      },
+      {
+        "day": 7,
+        "place": "Leave for Delhi by air reaching a few hours before you board the flight back home",
+        "description": "Leave for Delhi by air reaching a few hours before you board the flight back home. Bidding you a goodbye and wish to meet you again."
+      }
+    ],
+    "highlights": "Visit to the offbeat and charming Chittorgarh Jaipur Markets exploration. See to believe one of the biggest cannon of the world at Jaigarh Jaipur. Chance to see smaller town's of India. A family lunch along with cooking lesson.",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/03/new-crop-min.jpg",
     "price": 1750,
     "sourceUrl": "https://vijayindiatours.com/tours/tajmahal-india-tours/"
   },
@@ -58,10 +288,48 @@
     "id": "official-371",
     "slug": "spiritual-getaway",
     "name": "Spiritual getaway",
-    "overview": "Spiritual getaway is part of Vijay India Tours' signature collection, built around the published route: Delhi > Haridwar > Rishikesh > Jim Corbette National Park > Agra > Varanasi > Delhi/Extenstion to the Land of Royal's Rajasthan.",
+    "overview": "India is famous for it’s spirituality and its ancient art of meditation which help’s one achieve control over oneself as well as a way to unite with the supreme power. To get a insight about India’s religious and spiritual aspects and to connect with it, it’s a must to visit Haridwar set amid the foothills of Himalya’s and around along with Varanasi the holiest city where a large no’s of saint’s and individuals can be found taking a dip in the holy river ganges and indulging in religious prayer’s at the various ghat’s or the river banks. It is said that if you dip or immerse your self in the holy water it eases your sins. Then not to forget the Taj Mahal to see once you are pure as it say’s on the gateway of Taj Mahal &#8221; let no man who is not pure at heart enter the garden of paradise&#8221; (Char Bagh). And continue to the city of Varanasi with narrow streets and ghats, not to miss the small and large temples here and there with all the priest’s indulging in the prayers. Travel Route var Locationsidt = [{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 30.0869, lon: 78.2676, title: \"Rishikesh\", html: \" Rishikesh \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 29.5300, lon: 78.7747, title: \"Corbett Park\", html: \" Corbett Park \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 27.1767, lon: 78.0081, title: \"Agra\", html: \" Agra \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 25.3176, lon: 82.9739, title: \"Varanasi\", html: \" Varanasi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},];var $ugmincptv = jQuery.noConflict(); $ugmincptv(function() { new Maplace({ map_div: \"#googlemap\", visualRefresh: true,locations: Locationsidt,type: \"polyline\", generate_controls: true, controls_on_map: true, controls_type: \"dropdown\", controls_title: \"Controls\", view_all: true, view_all_text: \"View all points\", show_markers: true, show_infowindows: true,map_options: {scrollwheel: true,mapTypeId: google.maps.MapTypeId.ROADMAP, },}).Load(); });",
     "plan": "Delhi > Haridwar > Rishikesh > Jim Corbette National Park > Agra > Varanasi > Delhi/Extenstion to the Land of Royal's Rajasthan",
     "dayCount": 7,
-    "highlights": "Learning on the major Religion of India Hinduism Tiger Sighting amist the view of Himalyan foothills River Rafting on the",
+    "days": [
+      {
+        "day": 1,
+        "place": "Kick Start in the National Capital Region of India",
+        "description": "Kick Start in the National Capital Region of India, visiting the spiritual sites belonging to various sects and religion - The Jama Masjid largest mosque of India and the Gurudwara Bangla Saheb belonging to Sikhism where we can see the free canteen and if feasible take a look inside the kitchen where people give service to the community. Drive through the India Gate and other govt. buildings built during the Colonial Era."
+      },
+      {
+        "day": 2,
+        "place": "Start of early to Haridwar",
+        "description": "Start of early to Haridwar, where we will visit the Ghat's where numerous people come to wash away their sin and to pass the ashes of their ancestors in the Holy River Ganges. See the saffron clothed people claiming themselves to be saint's which is a tough decision to make out the true ones. And continue to Rishikesh."
+      },
+      {
+        "day": 3,
+        "place": "Set amid the Himalayas this beautiful place will soothe and calm your mind and soul",
+        "description": "Set amid the Himalayas this beautiful place will soothe and calm your mind and soul. Famous for its Ashram's where once visited the Beetles for spiritual growth. Would do a yoga session here is worth trying and later raft on the currents of the Ganges."
+      },
+      {
+        "day": 4,
+        "place": "Start for the Tiger Adventure in the great Jim Corbett National Park which is a biodiversity hotspot rich in its flora and fauna",
+        "description": "Start for the Tiger Adventure in the great Jim Corbett National Park which is a biodiversity hotspot rich in its flora and fauna, named after an avid hunter and later turned into wildlife conservationist who created this as reserved National Park. Relax in the serene environment and greenery near the Himalaya's"
+      },
+      {
+        "day": 5,
+        "place": "Safari to the Park and then depart to Agra the to catch the glimpse of the monument of love",
+        "description": "Safari to the Park and then depart to Agra the to catch the glimpse of the monument of love. In the Evening visit the proposed site for the Black Taj Mahal - the Mehtab Garden's to see the Taj Mahal at sunset from across river Yamuna."
+      },
+      {
+        "day": 6,
+        "place": "Early morning visit to the Taj Mahal and explore the great Red Fort in Agra before we leave for Varanasi the Holiest of all cities",
+        "description": "Early morning visit to the Taj Mahal and explore the great Red Fort in Agra before we leave for Varanasi the Holiest of all cities ."
+      },
+      {
+        "day": 7,
+        "place": "Wander the streets of Varanasi where you would find temple's in every nook and corner and learn about the Hinduism",
+        "description": "Wander the streets of Varanasi where you would find temple's in every nook and corner and learn about the Hinduism. Visit the Manikarnika ghat famous for its Cremation going on throughout the day it is said if one is cremated here they will achieve Moksha or Salvation from the cycle of births. Enjoy a boat ride to calm you from the narrow streets of Varanasi . Relax tonight and sail to to your destination next."
+      }
+    ],
+    "highlights": "Learning on the major Religion of India Hinduism Tiger Sighting amist the view of Himalyan foothills River Rafting on the Ganges Visit to the place of worship of various religion Explore the Holy cities of Haridwar and Varanasi",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/04/new-crop_13-min.jpg",
     "price": 2199,
     "sourceUrl": "https://vijayindiatours.com/tours/spiritual-getaway/"
   },
@@ -69,10 +337,12 @@
     "id": "official-374",
     "slug": "incredible-india",
     "name": "Incredible India",
-    "overview": "Incredible India is part of Vijay India Tours' signature collection, built around the published route: .",
+    "overview": "incredible india incredible India tours Capture the essence of India in one go. Going through to the finest of Mughal and Rajput architectures in Rajasthan and Agra. Then feeling the british influence in India in the national capital of delhi. And experiencing the spiritual side of India at the city of Varanasi which boast’s the ghats or river banks which can ease off your sins and watch the prayer offered to the river ganges. Capturing all these memories in your camera so you rewind and unwind after a tiring day at work, to love and learn this great part of the world Incredible India.",
     "plan": "",
     "dayCount": 0,
+    "days": [],
     "highlights": "",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/04/new-crop_12-min.jpg",
     "price": 1400,
     "sourceUrl": "https://vijayindiatours.com/tours/incredible-india/"
   },
@@ -80,10 +350,63 @@
     "id": "official-384",
     "slug": "the-country-side",
     "name": "Country Side Escape",
-    "overview": "Country Side Escape is part of Vijay India Tours' signature collection, built around the published route: Delhi > Jaipur > Deoli > Gwalior > Agra > Delhi.",
+    "overview": "Surely not a luxurious one but you get all the things you need to get along with the day. A wonderful experience of a lifetime to see the rural aspects of the village including a free roam about in an indian village going around the sights of farmings, the art of feeding animals, making of cow dung cake’s to feed for the stove and the other daily routines of the village. To add the topping you will be staying at a family Farm House with modern ammenities and lavish lawns, a way to interect with the local’s and share their lifestyle and schedule to get a closer insight. Travel Route var Locationsidt = [{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.9124336, lon: 75.78727090000007, title: \"Jaipur\", html: \" Jaipur \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 25.7582, lon: 75.3818, title: \"Deoli\", html: \" Deoli \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.0173, lon: 76.5026, title: \"Ranthambore\", html: \" Ranthambore \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.2183, lon: 78.1828, title: \"Gwalior\", html: \" Gwalior \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 27.1766701, lon: 78.00807450000002, title: \"Agra\", html: \" Agra \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},];var $ugmincptv = jQuery.noConflict(); $ugmincptv(function() { new Maplace({ map_div: \"#googlemap\", visualRefresh: true,locations: Locationsidt,type: \"polyline\", generate_controls: true, controls_on_map: true, controls_type: \"dropdown\", controls_title: \"Controls\", view_all: true, view_all_text: \"View all points\", show_markers: true, show_infowindows: true,map_options: {scrollwheel: true,mapTypeId: google.maps.MapTypeId.ROADMAP, },}).Load(); });",
     "plan": "Delhi > Jaipur > Deoli > Gwalior > Agra > Delhi",
     "dayCount": 10,
+    "days": [
+      {
+        "day": 1,
+        "place": "Arrival at the Delhi airport and transfer to the beautiful pink city of Jaipur to begin the tour",
+        "description": "Arrival at the Delhi airport and transfer to the beautiful pink city of Jaipur to begin the tour. Evening at your country house."
+      },
+      {
+        "day": 2,
+        "place": "Explore the most famous palace of Jaipur the amber and a ride to the Fort which boast's to have one of the largest canon in the world",
+        "description": "Explore the most famous palace of Jaipur the amber and a ride to the Fort which boast's to have one of the largest canon in the world, and have a bird's eye view of Jaipur. Next destination is the City Palace of Jaipur which is a museum showcasing the wealth and antique item's which belong to the Royal's of Jaipur. And a visit to the Solar Observatory 1734 by the learned King of Jaipur."
+      },
+      {
+        "day": 3,
+        "place": "Wander around the street's of Jaipur and learn the way of shopping",
+        "description": "Wander around the street's of Jaipur and learn the way of shopping. Evening visit to the monkey temple to catch the glimpse of monkey's and a visit to the exotic marigold hotel for dinner."
+      },
+      {
+        "day": 4,
+        "place": "Leave for Deoli a small suburb and visit the once mighty fort of Deoli which is privately owned",
+        "description": "Leave for Deoli a small suburb and visit the once mighty fort of Deoli which is privately owned. Stay at a low-key hotel in the city and take a walk around the village to learn about the way of life in the Indian Village. Stay at a river site heritage hotel."
+      },
+      {
+        "day": 5,
+        "place": "Explore more of the village scene and make new friend's with the youth who are eager to flaunt off their english skill's and converse with you",
+        "description": "Explore more of the village scene and make new friend's with the youth who are eager to flaunt off their english skill's and converse with you. Evening at the biggest Dam of Rajasthan from where most of the State get's it's water from."
+      },
+      {
+        "day": 6,
+        "place": "Start of for the Ranthambore national Park where we will be searching tiger's in the wild safari on a jeep in the evening",
+        "description": "Start of for the Ranthambore national Park where we will be searching tiger's in the wild safari on a jeep in the evening. Relax at the hotel at night."
+      },
+      {
+        "day": 7,
+        "place": "Kick off to Gwalior the princely state of the central India",
+        "description": "Kick off to Gwalior the princely state of the central India. Check in at hotel and them walk across the gwalior Fort a one of a kind. Walk across the street's of central India and it's bazaar's."
+      },
+      {
+        "day": 8,
+        "place": "Visit the Jai Vilas Palce meuseum and bid a bye to the princely Gwalior",
+        "description": "Visit the Jai Vilas Palce meuseum and bid a bye to the princely Gwalior. To our onward journey of Agra. In the evening visit the Red Fort of Agra the incredible seat of Mughal Power in India from where most of India was ruled."
+      },
+      {
+        "day": 9,
+        "place": "Early morning view of the Taj Mahal Tomb the greatest of architecture erected in love",
+        "description": "Early morning view of the Taj Mahal Tomb the greatest of architecture erected in love. Let yourself loose in it's beauty and enjoy. After Lunch leave to Delhi. Evening car tour of India Gate and the president of India's house."
+      },
+      {
+        "day": 10,
+        "place": "Visit the Qutub Minar and the famous chandni chowk street market",
+        "description": "Visit the Qutub Minar and the famous chandni chowk street market. And relax before you leave for your home."
+      }
+    ],
     "highlights": "Home Stay at a country side farm house Village experience River walk Exploring the local bazaar's Experiencing the Taj",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/04/new-crop_13-min.jpg",
     "price": 950,
     "sourceUrl": "https://vijayindiatours.com/tours/the-country-side/"
   },
@@ -91,10 +414,63 @@
     "id": "official-388",
     "slug": "adventure-trail",
     "name": "Adventure trail",
-    "overview": "Adventure trail is part of Vijay India Tours' signature collection, built around the published route: Delhi > Shekhawati > Bikaner > Jaipur > Ranthambore > Gwalior > Agra > Delhi.",
+    "overview": "India is a adventure from the moment you land here, but to get that extra adrelanin rush lets climb some of the foothills of Rajasthan without any equipments, or do a hot air balooning and not to miss the serene Rishikesh where the ganga is in green color without any impurities. Go rafting into the current’s of ganges stay at a tented accomodation on the river banks and start off the day with a dive in the Ganges. Well try and cross a busy road alone thats an adventure too in India. Travel Route var Locationsidt = [{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 28.2016, lon: 75.0465, title: \"Mahansar\", html: \" Mahansar \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_b.png\",},{ lat: 28.0229, lon: 73.3119, title: \"Bikaner\", html: \" Bikaner \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.9124336, lon: 75.78727090000007, title: \"Jaipur\", html: \" Jaipur \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.0173, lon: 76.5026, title: \"Ranthambore\", html: \" Ranthambore \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.2183, lon: 78.1828, title: \"Gwalior\", html: \" Gwalior \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 27.1766701, lon: 78.00807450000002, title: \"Agra\", html: \" Agra \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},];var $ugmincptv = jQuery.noConflict(); $ugmincptv(function() { new Maplace({ map_div: \"#googlemap\", visualRefresh: true,locations: Locationsidt,type: \"polyline\", generate_controls: true, controls_on_map: true, controls_type: \"dropdown\", controls_title: \"Controls\", view_all: true, view_all_text: \"View all points\", show_markers: true, show_infowindows: true,map_options: {scrollwheel: true,mapTypeId: google.maps.MapTypeId.ROADMAP, },}).Load(); });",
     "plan": "Delhi > Shekhawati > Bikaner > Jaipur > Ranthambore > Gwalior > Agra > Delhi",
     "dayCount": 10,
-    "highlights": "Village visit to learn the way of Life in Rural India. Camel Ride in the Thar Desert. Exploring the busy",
+    "days": [
+      {
+        "day": 1,
+        "place": "Kick Start the India adventure amid the crowds and the busy street's of Delhi",
+        "description": "Kick Start the India adventure amid the crowds and the busy street's of Delhi, wander around the colonial govt. buildings and then to old Delhi Jama Masjid and walk to the Red Fort experiencing the people of India."
+      },
+      {
+        "day": 2,
+        "place": "Half day exploration of the famous monuments of Delhi before you are transferred to the western Thar desert of Rajasthan",
+        "description": "Half day exploration of the famous monuments of Delhi before you are transferred to the western Thar desert of Rajasthan."
+      },
+      {
+        "day": 3,
+        "place": "Wander around the artistic Haveli's and stay at a former Fort at Mahensar Village",
+        "description": "Wander around the artistic Haveli's and stay at a former Fort at Mahensar Village, where we get to see the Rural life and the famous Sone Ki Dukaan (Gold Shop) which is a special room in the lavish Mansion decorated with Gold work on walls. And Camel Safari here or at next destination Bikaner."
+      },
+      {
+        "day": 4,
+        "place": "Today we visit the auspicious temple of Rat's where rats are worshipped and considered sacred",
+        "description": "Today we visit the auspicious temple of Rat's where rats are worshipped and considered sacred. Don't scare yourself if a rat steps on your foot, and explore many famous temple of the city before visiting the Junagarh Fort at evening which adorns a beautiful collection of antiques ranging from the dummy plane built by the Wright Brother's themselves to a great collection of Artilleries."
+      },
+      {
+        "day": 5,
+        "place": "Visit the city Pink City famous for it's rose pink colored campus guarded by walls",
+        "description": "Visit the city Pink City famous for it's rose pink colored campus guarded by walls. Evening at shopping and at night visit the Amber Palace complex a beautiful and architectural marvel with Mughal and Rajput styles."
+      },
+      {
+        "day": 6,
+        "place": "Explore the one of it's Kind the Hawa Mahal or the Palace of Wind's and the Solar Observatory dating back to 16th century and nearly correct in calculations",
+        "description": "Explore the one of it's Kind the Hawa Mahal or the Palace of Wind's and the Solar Observatory dating back to 16th century and nearly correct in calculations. Evening to wander around the city on your own and if possible meet and greet a local family for lunch or dinner and learn about Indian cuisine."
+      },
+      {
+        "day": 7,
+        "place": "Start of to the Tiger's Den at Ranthambore National Park",
+        "description": "Start of to the Tiger's Den at Ranthambore National Park, and visit the Safari at evening. Day to leisure to relax from India's Adventures."
+      },
+      {
+        "day": 8,
+        "place": "Early morning safari to increase your chance's of Tiger Sighting after lunch we leave for Gwalior in the heart of India Madhya Pradesh",
+        "description": "Early morning safari to increase your chance's of Tiger Sighting after lunch we leave for Gwalior in the heart of India Madhya Pradesh."
+      },
+      {
+        "day": 9,
+        "place": "Visit the Gwalior Fort a beautiful and majestic work of the Kacchawa's",
+        "description": "Visit the Gwalior Fort a beautiful and majestic work of the Kacchawa's. And visit the Sarod Garh the music museum maintained by the famous Classical Musician. Leaving for the City of the Taj - Agra."
+      },
+      {
+        "day": 10,
+        "place": "Early morning visit of the Taj Mahal with sunrise and the Red Fort which was the seat of Mughal Power and most of India was controlled right from here",
+        "description": "Early morning visit of the Taj Mahal with sunrise and the Red Fort which was the seat of Mughal Power and most of India was controlled right from here. After Lunch Depart for Delhi."
+      }
+    ],
+    "highlights": "Village visit to learn the way of Life in Rural India. Camel Ride in the Thar Desert. Exploring the busy street Market's. Tiger Safari's two in numbers. Cooking and tasting with a local family.",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/04/new-crop-min.jpg",
     "price": 1100,
     "sourceUrl": "https://vijayindiatours.com/tours/adventure-trail/"
   },
@@ -102,10 +478,48 @@
     "id": "official-399",
     "slug": "tiger-safari-india",
     "name": "Experience the Thrill of a Tiger Safari in India",
-    "overview": "Experience the Thrill of a Tiger Safari in India is part of Vijay India Tours' signature collection, built around the published route: Delhi > Agra > Jaipur > Ranthambhore Tiger Reserve > Gwalior > Khajuraho > Bandhavgarh National Park > Delhi.",
+    "overview": "Best Tiger Safari in India by Vijay India Tours At Vijay India Tours , we specialize in delivering the best tiger safari in India , offering exclusive and immersive wildlife experiences. As a family-run business with a passion for nature and conservation, we provide personalized and expertly guided safaris to India’s top tiger reserves. Whether you’re an adventure seeker, a wildlife photographer, or simply a nature lover, we ensure an unforgettable journey into the heart of India’s wilderness. Why Choose Vijay India Tours for Your Tiger Safari? Expert Local Knowledge: Our experienced guides and naturalists bring you closer to the wild. Tailor-Made Safari Packages: We design customized itineraries based on your preferences and interests. Luxury & Comfort: Stay at the finest jungle lodges and eco-friendly resorts. High Tiger Sighting Probability: We take you to the best zones for spotting majestic Bengal tigers. Trusted by Wildlife Enthusiasts: Our commitment to quality and ethical wildlife tourism makes us a top choice for safari lovers. Best Tiger Safari Destinations in India 1. Ranthambhore National Park – Rajasthan’s Royal Tiger Haven Home to the famous tigers of Ranthambhore Stunning landscapes with ancient fort ruins Jeep and Canter safaris available 2. Bandhavgarh National Park – Land of the Highest Tiger Density Best chance for tiger sightings in India Historical caves and Bandhavgarh Fort Exclusive Jeep safaris with expert guides 3. Kanha National Park – The Inspiration for The Jungle Book Beautiful meadows and dense sal forests Rare species like the Barasingha (Swamp Deer) Premium wildlife lodges for a luxury experience 4. Jim Corbett National Park – India’s First Tiger Reserve A mix of grasslands, rivers, and dense forests The Dhikala zone is famous for high tiger activity Elephant and Jeep safaris for a thrilling adventure 5. Pench National Park – A Hidden Gem for Wildlife Lovers Rich biodiversity with leopards and wild dogs Lesser crowded for a peaceful safari experience Exceptional birdwatching opportunities Luxury Tiger Safari Tour in India – A Premium Experience For those looking for an upscale wildlife adventure, we offer luxury tiger safari in India experiences that include: Private Jeep Safaris with top-tier naturalists Stay at world-class jungle resorts and boutique lodges Customized photography and documentary tours Exclusive access to prime safari zones Why Book Your Tiger Safari with Vijay India Tours? Personalized Itineraries – Every safari is crafted to offer the best wildlife experience. 24/7 Assistance – Our team is always available to assist you throughout your journey. Responsible Tourism – We promote ethical and sustainable wildlife tourism practices. Strong Local Network – We collaborate with expert naturalists, drivers, and luxury accommodations. Book Your Ultimate Tiger Safari in India Embark on an unforgettable journey into India’s wild landscapes with Vijay India Tours. Let us handle all your safari arrangements while you focus on capturing the mesmerizing beauty of the Bengal tiger in its natural habitat. 📞 Contact Us Today at: +91-7976064160 to plan your dream tiger safari tour package! Travel Route var Locationsidt = [{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 27.1766701, lon: 78.00807450000002, title: \"Agra\", html: \" Agra \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.9124, lon: 75.7873, title: \"Jaipur\", html: \" Jaipur \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.0173, lon: 76.5026, title: \"Ranthambore\", html: \" Ranthambore \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.2183, lon: 78.1828, title: \"Gwalior\", html: \" Gwalior \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 24.8318, lon: 79.9199, title: \"Khajuraho\", html: \" Khajuraho \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 23.7225, lon: 81.0242, title: \"Bandhavgarh\", html: \" Bandhavgarh \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},];var $ugmincptv = jQuery.noConflict(); $ugmincptv(function() { new Maplace({ map_div: \"#googlemap\", visualRefresh: true,locations: Locationsidt,type: \"polyline\", generate_controls: true, controls_on_map: true, controls_type: \"dropdown\", controls_title: \"Controls\", view_all: true, view_all_text: \"View all points\", show_markers: true, show_infowindows: true,map_options: {scrollwheel: true,mapTypeId: google.maps.MapTypeId.ROADMAP, },}).Load(); }); &nbsp;",
     "plan": "Delhi > Agra > Jaipur > Ranthambhore Tiger Reserve > Gwalior > Khajuraho > Bandhavgarh National Park > Delhi",
     "dayCount": 7,
-    "highlights": "Best tiger safari in India with expert naturalists Explore Ranthambhore, Bandhavgarh & Kanha National Parks Luxury jungle lodges & eco-friendly",
+    "days": [
+      {
+        "day": 1,
+        "place": "Arrival in Delhi – Welcome to India Arrive at Indira Gandhi International Airport",
+        "description": "Arrival in Delhi – Welcome to India Arrive at Indira Gandhi International Airport, Delhi. Meet and greet with our representative. Transfer to a luxury hotel for relaxation. Optional sightseeing tour of Old and New Delhi. Enjoy a welcome dinner and tour briefing."
+      },
+      {
+        "day": 2,
+        "place": "Delhi to Ranthambhore – Begin Your Tiger Safari Early morning transfer to the railway station/airport for travel to Sawai Madhopur",
+        "description": "Delhi to Ranthambhore – Begin Your Tiger Safari Early morning transfer to the railway station/airport for travel to Sawai Madhopur. Arrive at Ranthambhore National Park, check in to a luxury wildlife resort. Evening at leisure with a nature walk or local village visit. Overnight stay at the resort."
+      },
+      {
+        "day": 3,
+        "place": "Tiger Safari in Ranthambhore National Park Early morning Jeep Safari in Ranthambhore’s best tiger zones",
+        "description": "Tiger Safari in Ranthambhore National Park Early morning Jeep Safari in Ranthambhore’s best tiger zones. Return to the resort for breakfast and relaxation. Afternoon Jeep Safari for another thrilling wildlife experience. Evening at leisure, followed by a cultural program and dinner."
+      },
+      {
+        "day": 4,
+        "place": "Ranthambhore to Bandhavgarh – The Land of Tigers Morning departure to Bandhavgarh National Park via flight/train",
+        "description": "Ranthambhore to Bandhavgarh – The Land of Tigers Morning departure to Bandhavgarh National Park via flight/train. Check-in at a luxury jungle lodge. Evening at leisure, wildlife discussion with expert naturalists. Overnight stay at the lodge."
+      },
+      {
+        "day": 5,
+        "place": "Full-Day Safari in Bandhavgarh National Park Early morning Jeep Safari to explore Bandhavgarh’s high tiger density zones",
+        "description": "Full-Day Safari in Bandhavgarh National Park Early morning Jeep Safari to explore Bandhavgarh’s high tiger density zones. Breakfast at the lodge and rest. Afternoon Jeep Safari with chances of sighting Bengal tigers, leopards, and exotic birds. Campfire dinner at the lodge."
+      },
+      {
+        "day": 6,
+        "place": "Bandhavgarh to Kanha – The Jungle Book Experience Morning transfer to Kanha National Park",
+        "description": "Bandhavgarh to Kanha – The Jungle Book Experience Morning transfer to Kanha National Park. Check-in at an eco-luxury lodge. Afternoon safari in Kanha’s beautiful meadows. Evening at leisure, nature talk with wildlife experts."
+      },
+      {
+        "day": 7,
+        "place": "Kanha to Delhi – Departure Early morning safari for a final chance to spot tigers",
+        "description": "Kanha to Delhi – Departure Early morning safari for a final chance to spot tigers. Breakfast and check-out from the lodge. Transfer to Jabalpur/Nagpur airport for flight to Delhi."
+      }
+    ],
+    "highlights": "Best tiger safari in India with expert naturalists Explore Ranthambhore, Bandhavgarh & Kanha National Parks Luxury jungle lodges & eco-friendly accommodations High chances of Bengal tiger & wildlife sightings Private Jeep safaris for an exclusive experience",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/04/new-crop_8-min.jpg",
     "price": 3200,
     "sourceUrl": "https://vijayindiatours.com/tours/tiger-safari-india/"
   },
@@ -113,10 +527,12 @@
     "id": "official-402",
     "slug": "india-festival",
     "name": "India Festival expedition | Holidays 2024-25 India Tours",
-    "overview": "India Festival expedition | Holidays 2024-25 India Tours is part of Vijay India Tours' signature collection, built around the published route: .",
+    "overview": "Since the major festival of Diwali arrives as per the movement of the stars and the sun, be sure to select your dates appropriately to blend in the joyous atmosphere spread across India on our Indian festival Expedition. The festival of light is celebrated on the occasion of the homecoming of Lord Ram with his wife Sita who was abducted by Ravan the then ruler of Sri Lanka. Diwali is celebrated throughout the country and one should get a mask beforehand as the smoke from the fireworks and crackers can sometimes get thick, especially in cities. Carry your fancy outfits or you can buy one from the local markets, to blend in the colors of Diwali, as most people wear their shiny and fancy clothes including Poshaks filling the streets with colors. Get your work done and bags packed before it’s late. Our India festival expedition is fully customizable and the itinerary is prepared on request. Across India Diwali is celebrated with joy, homes illuminated with lights and oil lamps locally known as diyas, with people visiting their friends and relatives, it is the time of the year when you go and greet your family and friends. We take you across the cities and the rural region to have a first-hand experience of the India Holi festival and the Festival of lights. Choose your destination in India, be it Udaipur the city of lakes in India , or the pink city of Jaipur, these cities are a perfect choice to celebrate the festival with your loved ones. With our experts on tour who will share with you the local customs and traditions, and take you to the right places for celebrations. Indulge in a celebration unlike any other, filled with lights, sweets and warmth as you move through the celebration week across India.",
     "plan": "",
     "dayCount": 0,
-    "highlights": "Feel the color of India in the festive season. The brightly lit street filled with women's shopping for the auspicious",
+    "days": [],
+    "highlights": "Feel the color of India in the festive season. The brightly lit street filled with women's shopping for the auspicious ocasion's. Indulge in the celebration. Do it the Indian way.",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/04/new-crop_4-min.jpg",
     "price": 1750,
     "sourceUrl": "https://vijayindiatours.com/tours/india-festival/"
   },
@@ -124,10 +540,58 @@
     "id": "official-405",
     "slug": "life-in-india-tours",
     "name": "Life in India Tours : Family Home stay and guesthouses",
-    "overview": "Life in India Tours : Family Home stay and guesthouses is part of Vijay India Tours' signature collection, built around the published route: Day 1 - Delhi Day 2 - Agra Day 3 - Deoli Day 4 - Deoli Day 5 - Udaipur Day 6 - Udaipur Day 7 - Jaipur Day 8 - Jaipur Day 9 - Delhi.",
+    "overview": "Life in India Tours It feels good to be in India and the best is to seep into the daily rituals and processing of India, join our life in India tour along with your family to share few days with Indian Families at their home or you have the choice to resort to your hotel’s at night. Indian’s being friendly hosts are delighted to share and care for their guests even if they are brit, American or European, or Australian and the list goes on. Indian’s have a craze for foreign nationals and they will show you around the best and share their experiences in India and would be keen to hear your style and way of living back in your homeland. Explore the wonderful sights of India, taste the authentic home-cooked food with your hosts, to get the taste of India’s cuisine. We travel not just to see but to learn, to understand and experience and our Life in India tours are specially designed to provide you with deep insight about India, by getting you in the family of friendly and knowledgeable hosts who are more than happy to welcome you and share with you their experience of the place and the country. Life in India Tours Stay with Indian Family at Homestays With our selected local homestay in each place you visit, there are friendly hosts to welcome you and share with you their knowledge of the place, sharing with you the best spots to visit, the markets to shop in, and other local details which you could not even find in the lonely planet or TripAdvisor. Locals have the best piece of advice and when sharing stories you get to know a lot more about the people, the traditions of the place you visit. Explore one such Jaipur home stay and guesthouse which is a heritage-style building with all the modern facilities and well-knowledgeable hosts who would make you feel at home. &nbsp; &nbsp; Travel Route var Locationsidt = [{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 27.1766701, lon: 78.00807450000002, title: \"Agra\", html: \" Agra \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 25.7582, lon: 75.3818, title: \"Deoli\", html: \" Deoli \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 24.5854, lon: 73.7125, title: \"Udaipur\", html: \" Udaipur \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.9124336, lon: 75.78727090000007, title: \"Jaipur\", html: \" Jaipur \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},];var $ugmincptv = jQuery.noConflict(); $ugmincptv(function() { new Maplace({ map_div: \"#googlemap\", visualRefresh: true,locations: Locationsidt,type: \"polyline\", generate_controls: true, controls_on_map: true, controls_type: \"dropdown\", controls_title: \"Controls\", view_all: true, view_all_text: \"View all points\", show_markers: true, show_infowindows: true,map_options: {scrollwheel: true,mapTypeId: google.maps.MapTypeId.ROADMAP, },}).Load(); });",
     "plan": "Day 1 - Delhi Day 2 - Agra Day 3 - Deoli Day 4 - Deoli Day 5 - Udaipur Day 6 - Udaipur Day 7 - Jaipur Day 8 - Jaipur Day 9 - Delhi",
     "dayCount": 9,
-    "highlights": "Cultural dance and music show. Watching Indian cinema. Stay with a Family. Shopping in the streets of Pink City. Boat",
+    "days": [
+      {
+        "day": 1,
+        "place": "Delhi Reaching Delhi by Flight you will be met and greeted by your Tour Escort who will be your local guardian in India for your duration of Stay",
+        "description": "Delhi Reaching Delhi by Flight you will be met and greeted by your Tour Escort who will be your local guardian in India for your duration of Stay. Time for meals and visit the best of places in Delhi. By evening we leave for Agra."
+      },
+      {
+        "day": 2,
+        "place": "Agra Kick Start the day with the amazing Sight of Taj Mahal",
+        "description": "Agra Kick Start the day with the amazing Sight of Taj Mahal, well you have been waiting for it since long. Visit the baby Taj and leave for Deoli where you will be experiencing the village adventures."
+      },
+      {
+        "day": 3,
+        "place": "Deoli Enjoy a countryside escape to the village the service for the guests aren't like the hotels",
+        "description": "Deoli Enjoy a countryside escape to the village the service for the guests aren't like the hotels, it's different and great. Visit the largest Dam of Rajasthan which supplies water to most of the deserted state of Rajasthan."
+      },
+      {
+        "day": 4,
+        "place": "Deoli Explore the streets of the village and meet new friend's from the Indian village and go around in the village",
+        "description": "Deoli Explore the streets of the village and meet new friend's from the Indian village and go around in the village, visiting farm's and watch the workers breaking a sweat, and watch the cow's being milked and fed early in the morning. Leave for Udaipur after lunch."
+      },
+      {
+        "day": 5,
+        "place": "Udaipur Walk past the beautiful lake's of the city and in evening attend a cultural show at one of the old mansion with good dance and music",
+        "description": "Udaipur Walk past the beautiful lake's of the city and in evening attend a cultural show at one of the old mansion with good dance and music."
+      },
+      {
+        "day": 6,
+        "place": "Udaipur Take a boat ride in the Lake Pichola and go around the City Palace probably the best of the Palace's",
+        "description": "Udaipur Take a boat ride in the Lake Pichola and go around the City Palace probably the best of the Palace's. And attend the Lunch with a friendly family on invitation right next to the Palace. After that, we are leaving for the Pink destination."
+      },
+      {
+        "day": 7,
+        "place": "Jaipur Enjoy a stay with a family",
+        "description": "Jaipur Enjoy a stay with a family. The service and care for the guests aren't unlike the hotels, it's different and great. Today we will be visiting the Amer Fort, Jantar Mantar and the palace of Winds. Dinner at the veg household or at any restaurant outside."
+      },
+      {
+        "day": 8,
+        "place": "Jaipur Explore the bustling street's of Jaipur and go around shopping in the pink city",
+        "description": "Jaipur Explore the bustling street's of Jaipur and go around shopping in the pink city, and not to miss one of the best cinema hall's of India to experience the Bollywood life before you leave for Delhi."
+      },
+      {
+        "day": 9,
+        "place": "Delhi Explore the city of Delhi and visit the largest Mosque in India Jama Masjid and the incredible Lotus temple",
+        "description": "Delhi Explore the city of Delhi and visit the largest Mosque in India Jama Masjid and the incredible Lotus temple. Visit the National Art's Museum and in the evening visit to the Connaught Place the shopper's and foodie stop of Delhi and end the tour at best of resturant's."
+      }
+    ],
+    "highlights": "Cultural dance and music show. Watching Indian cinema. Stay with a Family. Shopping in the streets of Pink City. Boat ride in Lake Pichola. Experiencing and learning at a Village",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/03/new-crop_3-min.jpg",
     "price": 1500,
     "sourceUrl": "https://vijayindiatours.com/tours/life-in-india-tours/"
   },
@@ -135,10 +599,73 @@
     "id": "official-407",
     "slug": "indian-food-tour",
     "name": "Indian Food Tour 2025",
-    "overview": "Indian Food Tour 2025 is part of Vijay India Tours' signature collection, built around the published route: Delhi - Jaipur - Bikaner - Jodhpur - Pushkar - Delhi.",
+    "overview": "Explore Indian food on an adventure filled with spices, aroma, and many delicious cuisines of India, filled with the perfect blend of aroma, spices, and flavors, while avoiding Delhi-Belly . You are escorted by a food connoisseur, who is an expert in the art of cooking Indian food and is well-versed with the various species, flavors, and aromas that are present in Indian cuisines. Start your Indian food tour with little spices and keep on increasing the flavors and spices as you get accustomed and used to them, and do not miss the lavish Indian dinner farewell with all Indian ingredients from mouth-watering Red-Meat the famous food of Jaipur & Rajasthan to the delicious and sweet milk solid Desert’s which are a must to accompany your meals to ward off the extra amount of chilies. As you pass through local markets filled with the aroma of spices where large bags of chili, cumin seeds, turmeric, coriander, and many more spices can be found and wander the famous food centers of the city mostly crowded by the locals who often return for the mouth-watering tastes, you will get to learn about the culture and food of the places you visit. Learn about the specific usage of these aromatic spices and get a live session of Indian cooking by an expert cook who will amaze you with live cooking sessions. Check out the traditional delicacies of the places you visit and indulge in the essence of India by learning the culinary delights on this Indian food tour. Join us on the Indian food adventure through the land of the Kings – Rajasthan with our expert chef and cook who is more than happy to share with you the secrets of Indian cuisine while you enjoy gourmet meals on your journey through India. Sounds exciting? Book your India food tour with the experts in travel and food to experience the best of India with Vijay India Tours. Book Your Indian Food Tour Travel Route var Locationsidt = [{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.9124336, lon: 75.78727090000007, title: \"Jaipur\", html: \" Jaipur \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 28.0229, lon: 73.3119, title: \"Bikaner\", html: \" Bikaner \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.2389, lon: 73.0243, title: \"Jodhpur\", html: \" Jodhpur \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 26.4897, lon: 74.5511, title: \"Pushkar\", html: \" Pushkar \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 27.1766701, lon: 78.00807450000002, title: \"Agra\", html: \" Agra \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},{ lat: 28.6139391, lon: 77.20902120000005, title: \"Delhi\", html: \" Delhi \", zoom: 11, visible: true,icon: \"https://vijayindiatours.com/wp-content/themes/vijayindiatours/map_icon/location_.png\",},];var $ugmincptv = jQuery.noConflict(); $ugmincptv(function() { new Maplace({ map_div: \"#googlemap\", visualRefresh: true,locations: Locationsidt,type: \"polyline\", generate_controls: true, controls_on_map: true, controls_type: \"dropdown\", controls_title: \"Controls\", view_all: true, view_all_text: \"View all points\", show_markers: true, show_infowindows: true,map_options: {scrollwheel: true,mapTypeId: google.maps.MapTypeId.ROADMAP, },}).Load(); }); &nbsp;",
     "plan": "Delhi - Jaipur - Bikaner - Jodhpur - Pushkar - Delhi",
     "dayCount": 12,
-    "highlights": "Experiencing the most famous delicacies of India Visit old Havelli's of Bikaner Sunrise and sunset view of The Taj Shop",
+    "days": [
+      {
+        "day": 1,
+        "place": "Delhi On Arrival",
+        "description": "Delhi On Arrival, you will be picked up by car to your journey to Jaipur where you begin the tour, Evening at leisure."
+      },
+      {
+        "day": 2,
+        "place": "Jaipur Begin the Culinary Indian Food Tour with the authentic Indian breakfast Samosa and Kachori's served to your room along with the juice of your choice",
+        "description": "Jaipur Begin the Culinary Indian Food Tour with the authentic Indian breakfast Samosa and Kachori's served to your room along with the juice of your choice. We go around the bustling city of Jaipur to the Amber Palace and the Jal Mahal. Optional Palace of Winds and the Observatory. In the evening we go for dinner class cum party with the best of Rajasthani food cooked for you along with some basic cooking lessons from the Indian Kitchen."
+      },
+      {
+        "day": 3,
+        "place": "Jaipur Today we will start off with tea making because it's the most stable drink in India and is loved by all",
+        "description": "Jaipur Today we will start off with tea making because it's the most stable drink in India and is loved by all. After breakfast drive around the city and check out the Dal-Bati-Churma. After Lunch Depart for Bikaner the city of Namkeen and sweet Rasgulla."
+      },
+      {
+        "day": 4,
+        "place": "Bikaner Learn more about the Indian Food as you go around the Namkeen corner of the city and check out the famous of Namkeen which are made of flour and spices along with some kind of pulses and stuffings",
+        "description": "Bikaner Learn more about the Indian Food as you go around the Namkeen corner of the city and check out the famous of Namkeen which are made of flour and spices along with some kind of pulses and stuffings. Explore the Junagarh Fort and the old grand decorated home of the rich in the old city. Laal Maas for dinner or the Red meat with a lot of Chillies, Garlic and onion for dinner."
+      },
+      {
+        "day": 5,
+        "place": "Bikaner Visiting the one of a Kind temple in the World with mice all around and near to you the Deshnok Temple",
+        "description": "Bikaner Visiting the one of a Kind temple in the World with mice all around and near to you the Deshnok Temple. And take off to our next famous destination of Kachoris and sweet's."
+      },
+      {
+        "day": 6,
+        "place": "Jodhpur Taste the most famous Mava Kachori or a sweet Kachoris at the places where it was invented",
+        "description": "Jodhpur Taste the most famous Mava Kachori or a sweet Kachoris at the places where it was invented. And visit the Mehrangarh Fort complex and the Jaswant Thada. In evening we take a tour of the Spice Market and nearby Bazar so you can get some of the spices to add Indian flavour to your dishes back at home. Evening at leisure."
+      },
+      {
+        "day": 7,
+        "place": "Jodhpur Pack a set of Kachori's spiced and sweet's to feed your hunger on your way to the holy lake of Pushkar",
+        "description": "Jodhpur Pack a set of Kachori's spiced and sweet's to feed your hunger on your way to the holy lake of Pushkar. Go to the Lake and the Temple of Lord Brahma."
+      },
+      {
+        "day": 8,
+        "place": "Pushkar Relax and have a small walk in the colourful street markets",
+        "description": "Pushkar Relax and have a small walk in the colourful street markets. The day at leisure."
+      },
+      {
+        "day": 9,
+        "place": "Agra Early morning leave for Agra",
+        "description": "Agra Early morning leave for Agra. Settle at the hotel and at the sunset visit the Royal Garden's and take a view of the Taj Mahal for across the river among the Mughal Style Gardens. At Evening indulge in Mughal Style cuisine with a variety of meats on your plate."
+      },
+      {
+        "day": 10,
+        "place": "Agra Early morning a Glimpse of the Taj while it turns from white to orange as the sun rises",
+        "description": "Agra Early morning a Glimpse of the Taj while it turns from white to orange as the sun rises. Experience the wonder of Love with the cool morning breeze. For the breakfast have the local Petha and puri. And continue your tour to Delhi."
+      },
+      {
+        "day": 11,
+        "place": "Delhi Delhi being the Capital is full of flavour from all across India take an Inside walk into the famous food Destinations and the incredible work of Art's at the monument and temples of your choice",
+        "description": "Delhi Delhi being the Capital is full of flavour from all across India take an Inside walk into the famous food Destinations and the incredible work of Art's at the monument and temples of your choice. The evening is well spent at Connaught Place the food and pub hub."
+      },
+      {
+        "day": 12,
+        "place": "Delhi Hope you didn't have a Delhi Belly and continue the tour of the city and its magnificent architectural wonders along with a visit to your favourite International Food Chain",
+        "description": "Delhi Hope you didn't have a Delhi Belly and continue the tour of the city and its magnificent architectural wonders along with a visit to your favourite International Food Chain. The day at Leisure before you board off and some sweet's shopping to carry back home."
+      }
+    ],
+    "highlights": "Experiencing the most famous delicacies of India Visit old Havelli's of Bikaner Sunrise and sunset view of The Taj Shop spices Cooking Classes where you eat what you cook sweet tooth satisfaction",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2017/04/new-crop_3-min.jpg",
     "price": 1999,
     "sourceUrl": "https://vijayindiatours.com/tours/indian-food-tour/"
   },
@@ -146,10 +673,12 @@
     "id": "official-3014",
     "slug": "jaipur-tour-packages",
     "name": "Jaipur Tour Packages – Explore the Pink City Like Never Before",
-    "overview": "Jaipur Tour Packages – Explore the Pink City Like Never Before is part of Vijay India Tours' signature collection, built around the published route: Jantar Mantar City Palace Hawa Mahal Jal Mahal Amber Fort.",
+    "overview": "Luxury, Adventure & Family-Friendly Jaipur Tours Jaipur , the capital of Rajasthan, is a city of royal heritage, magnificent architecture, and vibrant culture. Our Jaipur tour packages offer an unforgettable journey through this historic city, allowing you to experience its grandeur, tradition, and charm. Whether you’re looking for a luxury vacation, a family getaway, or an adventurous exploration, our customized PinkCity tour packages cater to all types of travelers. Why Choose Our Jaipur Tour Packages? Our Jaipur tour provide a seamless travel experience with expert guides, comfortable accommodations, and well-planned itineraries. Whether you’re interested in historical landmarks, cultural experiences, or local markets, we ensure a memorable and hassle-free tour. Types of Jaipur Tour Packages We offer a variety of Jaipur tour packages tailored to different traveler needs: Heritage Jaipur Tour: Visit Jaipur’s forts, palaces, and museums to explore the city’s rich history. Luxury Jaipur Tour: Stay in heritage hotels, enjoy royal dining experiences, and travel in comfort. Jaipur Cultural Tour: Immerse yourself in local traditions, folk performances, and festivals. Adventure & Wildlife Tour: Explore nearby wildlife sanctuaries like Ranthambore National Park for a thrilling experience. Jaipur Weekend Getaway: Perfect for short trips, covering major attractions in a limited time. Ideal for Families, Couples & Solo Travelers Family Jaipur Tour Packages: Engage in kid-friendly attractions, elephant rides, and cultural workshops. Honeymoon Jaipur Tour Packages: Enjoy romantic candle-lit dinners, heritage hotel stays, and sunset views from forts. Solo Travelers’ Jaipur Packages: Discover Jaipur at your own pace with guided or self-exploration options. Accommodation & Transport Options Our Jaipur tour packages include stays in luxury hotels, heritage palaces, boutique stays, and budget-friendly options. We provide comfortable air-conditioned transportation for sightseeing to ensure a hassle-free journey. Book Your Jaipur Tour Now! Experience Jaipur’s royal splendor, vibrant markets, and historic landmarks with Vijay India Tours . Whether you seek adventure, culture, or relaxation, we have the perfect itinerary for you. Contact us today at: +91-7976064160 to book your dream Jaipur tour package! &nbsp;",
     "plan": "Jantar Mantar City Palace Hawa Mahal Jal Mahal Amber Fort",
     "dayCount": 0,
-    "highlights": "Must-Visit Attractions in Jaipur Amber Fort – A UNESCO World Heritage Site, showcasing Rajput and Mughal architecture. City Palace –",
+    "days": [],
+    "highlights": "Must-Visit Attractions in Jaipur Amber Fort – A UNESCO World Heritage Site, showcasing Rajput and Mughal architecture. City Palace – A majestic palace with museums, courtyards, and breathtaking artifacts. Hawa Mahal – The iconic Palace of Winds with intricate lattice windows. Jantar Mantar – A historic astronomical observatory with fascinating instruments. Nahargarh Fort – Offers stunning panoramic views of Jaipur’s skyline. Albert Hall Museum – The oldest museum in Rajasthan, showcasing an extensive collection of art and artifacts. Jaipur Bazaars – Explore Johari Bazaar, Bapu Bazaar, and Tripolia Bazaar for authentic Rajasthani jewelry, textiles, and handicrafts.",
+    "image": "https://vijayindiatours.com/wp-content/uploads/2025/02/Jaipur-Tour-Packages.png",
     "price": 3200,
     "sourceUrl": "https://vijayindiatours.com/tours/jaipur-tour-packages/"
   }

@@ -140,6 +140,7 @@ for (let offset = 0; offset < ids.length; offset += concurrency) {
       languages: html.includes('Other languages on request: German') ? ['English', 'German'] : ['English'],
       styles: styles.map(repairText),
       price,
+      departureYears: [...new Set([...html.matchAll(/data-year="(20\d{2})"/g)].map((match) => Number(match[1])))],
       included: extractIncluded(html, true),
       excluded: extractIncluded(html, false),
       days,
@@ -150,7 +151,7 @@ for (let offset = 0; offset < ids.length; offset += concurrency) {
   console.log(`Read ${Math.min(offset + concurrency, ids.length)} of ${ids.length} TourRadar packages`);
 }
 
-const officialResponse = await fetch('https://vijayindiatours.com/wp-json/wp/v2/tours?per_page=100&orderby=date&order=asc', { headers });
+const officialResponse = await fetch('https://vijayindiatours.com/wp-json/wp/v2/tours?per_page=100&orderby=date&order=asc&_embed=1', { headers });
 if (!officialResponse.ok) throw new Error(`Official catalogue: ${officialResponse.status}`);
 const officialPosts = await officialResponse.json();
 const officialTours = [];
@@ -161,16 +162,23 @@ for (const post of officialPosts) {
   const highlightMatch = html.match(/<div class="tab-pane" id="4">([\s\S]*?)<\/div>\s*<\/div>\s*<\/div>\s*<form/i);
   const priceMatch = html.match(/name="tour_price" value="([^"]+)"/i);
   const route = repairText(planMatch?.[1]).replace(/^Tour Plan\s*/i, '').trim();
-  const dayCount = [...repairText(itineraryMatch?.[1]).matchAll(/Day\s*-?\s*\d+/gi)].length;
-  const highlight = repairText(highlightMatch?.[1]).replace(/^Tour Highlights\s*/i, '').split(/\s+/).slice(0, 20).join(' ');
+  const itinerary = repairText(itineraryMatch?.[1]).replace(/^Detailed Itinerary\s*/i, '').trim();
+  const days = [...itinerary.matchAll(/Day\s*-?\s*(\d+)\s*([\s\S]*?)(?=Day\s*-?\s*\d+|$)/gi)].map((match) => ({
+    day: Number(match[1]),
+    place: match[2].replace(/^[-:]+\s*/, '').split(/[.,]/)[0].trim() || `Day ${match[1]}`,
+    description: match[2].replace(/^[-:]+\s*/, '').trim(),
+  }));
+  const highlight = repairText(highlightMatch?.[1]).replace(/^Tour Highlights\s*/i, '').trim();
   officialTours.push({
     id: `official-${post.id}`,
     slug: post.slug,
     name: repairText(post.title.rendered),
-    overview: `${repairText(post.title.rendered)} is part of Vijay India Tours' signature collection, built around the published route: ${route}.`,
+    overview: repairText(post.content.rendered),
     plan: route,
-    dayCount,
+    dayCount: days.length,
+    days,
     highlights: highlight,
+    image: post?._embedded?.['wp:featuredmedia']?.[0]?.source_url || null,
     price: priceMatch ? Number(priceMatch[1]) : null,
     sourceUrl: post.link,
   });
