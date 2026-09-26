@@ -25,7 +25,7 @@ const categoryRules = [
   ['Women Only', /women|woman/i],
   ['Festivals', /diwali|holi|festival|fair/i],
   ['South India', /south india|kerala|kochi|cochin|munnar|madurai|mysore/i],
-  ['Himalayas', /ladakh|leh|rishikesh|himalaya|uttarakhand|shimla|manali|adventure/i],
+  ['Himalayas', /ladakh|leh|rishikesh|himalaya|uttarakhand|shimla|manali/i],
   ['Spiritual India', /spiritual|varanasi|temple|yoga|pilgrim|khajuraho/i],
   ['Wildlife & Safari', /tiger|ranthambore|safari|wildlife|national park/i],
   ['Golden Triangle', /golden triangle|taj ?mahal|delhi.*agra.*jaipur/i],
