@@ -67,7 +67,7 @@ const destinationFilters = [
   { name: 'Kerala', keywords: ['kerala', 'kochi', 'cochin', 'munnar', 'alleppey'], column: 2, row: 2 },
   { name: 'Himalayas', keywords: ['himalaya', 'ladakh', 'leh', 'manali', 'shimla', 'rishikesh', 'uttarakhand'], column: 3, row: 2 },
 ];
-const heroTours = [currentTours[0], currentTours[1], currentTours[3]];
+const heroTours = [currentTours[0], currentTours[4], currentTours[3]];
 const galleryTours = [currentTours[0], currentTours[1], currentTours[2], currentTours[3], currentTours[5], currentTours[9]];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
