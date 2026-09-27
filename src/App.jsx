@@ -9,6 +9,7 @@ import currentTours from './data/tourradar.json';
 import officialTours from './data/official-tours.json';
 import audit from './data/catalog-audit.json';
 import logo from './assets/vijay-logo.png';
+import destinationIconAtlas from './assets/vijay-destination-icons.png';
 
 const CONTACT = {
   phone: '+91 79760 64160',
@@ -52,6 +53,20 @@ const officialListings = officialTours.map((tour) => ({
 
 const currentListings = currentTours.map((tour) => ({ ...tour, type: 'current' }));
 const allListings = [...currentListings, ...officialListings];
+const destinationFilters = [
+  { name: 'Delhi', keywords: ['delhi'], column: 0, row: 0 },
+  { name: 'Jaipur', keywords: ['jaipur'], column: 1, row: 0 },
+  { name: 'Agra', keywords: ['agra'], column: 2, row: 0 },
+  { name: 'Ranthambore', keywords: ['ranthambore'], column: 3, row: 0 },
+  { name: 'Pushkar', keywords: ['pushkar'], column: 0, row: 1 },
+  { name: 'Jodhpur', keywords: ['jodhpur'], column: 1, row: 1 },
+  { name: 'Udaipur', keywords: ['udaipur'], column: 2, row: 1 },
+  { name: 'Jaisalmer', keywords: ['jaisalmer'], column: 3, row: 1 },
+  { name: 'Varanasi', keywords: ['varanasi', 'benaras', 'banaras'], column: 0, row: 2 },
+  { name: 'Bikaner', keywords: ['bikaner'], column: 1, row: 2 },
+  { name: 'Kerala', keywords: ['kerala', 'kochi', 'cochin', 'munnar', 'alleppey'], column: 2, row: 2 },
+  { name: 'Himalayas', keywords: ['himalaya', 'ladakh', 'leh', 'manali', 'shimla', 'rishikesh', 'uttarakhand'], column: 3, row: 2 },
+];
 const heroTours = [currentTours[0], currentTours[1], currentTours[3]];
 const galleryTours = [currentTours[0], currentTours[1], currentTours[2], currentTours[3], currentTours[5], currentTours[9]];
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
@@ -62,6 +77,15 @@ function money(value) {
 
 function dateLabel(item) {
   return item.departureYears?.length ? `${Math.min(...item.departureYears)}–${Math.max(...item.departureYears)} · Flexible` : 'Dates on request';
+}
+
+function listingText(item) {
+  return [item.name, item.description, item.overview, item.plan, item.origin, item.end, ...(item.destinations || [])].filter(Boolean).join(' ').toLowerCase();
+}
+
+function matchesDestination(item, destination) {
+  const text = listingText(item);
+  return destination.keywords.some((keyword) => text.includes(keyword));
 }
 
 function Logo({ light = false }) {
@@ -89,9 +113,11 @@ function TrustStrip() {
   return <section className="trust-strip"><div className="shell trust-grid"><div><Star fill="#ffc107" strokeWidth={0}/><span><b>5.0 operator rating</b><small>TourRadar profile</small></span></div><div><Headphones/><span><b>Under 1 hour</b><small>Typical response time</small></span></div><div><ShieldCheck/><span><b>Private & personalised</b><small>Dates built around you</small></span></div><div><Languages/><span><b>English & German</b><small>Languages available</small></span></div></div></section>;
 }
 
-function QuickLinks({ onCategory }) {
-  const categories = ['Golden Triangle', 'Rajasthan', 'Wildlife', 'Himalayas', 'South India', 'Festivals', 'Food & Culture', 'Spiritual', 'Women Only', 'Coasts & Luxury'];
-  return <section className="quick shell"><h2>Explore India by experience</h2><div>{categories.map((name, index) => <button key={name} className={index < 4 ? 'hot' : ''} onClick={() => onCategory(name)}>{name}</button>)}</div></section>;
+function QuickLinks({ onDestination }) {
+  return <section className="quick shell" aria-labelledby="destination-title"><div className="quick-heading"><div><p className="kicker">CHOOSE YOUR DESTINATION</p><h2 id="destination-title">Explore India city by city</h2></div><p>Tap a city to see every matching Vijay package.</p></div><div className="destination-rail">{destinationFilters.map((destination) => {
+    const count = allListings.filter((item) => matchesDestination(item, destination)).length;
+    return <button key={destination.name} className="destination-icon-card" onClick={() => onDestination(destination.name)} aria-label={`Show ${count} ${destination.name} tour packages`}><span className="destination-icon-circle" aria-hidden="true"><span className="destination-icon-art" style={{ backgroundImage: `url(${destinationIconAtlas})`, backgroundPosition: `${destination.column * 33.3333}% ${destination.row * 50}%` }}/></span><strong>{destination.name}</strong><small>{count} {count === 1 ? 'tour' : 'tours'}</small></button>;
+  })}</div></section>;
 }
 
 function PackageCard({ item, onOpen }) {
@@ -112,21 +138,25 @@ function Collections({ onCategory }) {
   return <section className="destination-section"><div className="shell"><div className="section-head"><div><p className="kicker">TRAVEL YOUR STYLE</p><h2>India Collections</h2><p>Every image comes from a real Vijay package listing.</p></div></div><div className="destination-grid">{picks.map((pick) => <button className="destination-card" key={pick.name} onClick={() => onCategory(pick.name)}><img src={pick.tour.image} alt={pick.name}/><div><p>{pick.subtitle}</p><h3>{pick.name}</h3><span>Explore packages <ArrowRight size={17}/></span></div></button>)}</div></div></section>;
 }
 
-function AllPackages({ onOpen, requestedCategory, clearRequestedCategory }) {
+function AllPackages({ onOpen, requestedCategory, clearRequestedCategory, requestedDestination, clearRequestedDestination }) {
   const [query, setQuery] = useState('');
   const [category, setCategory] = useState('All');
   const [source, setSource] = useState('All 83');
+  const [destination, setDestination] = useState('');
   const [limit, setLimit] = useState(12);
-  useEffect(() => { if (requestedCategory) { setCategory(requestedCategory); setLimit(12); clearRequestedCategory(); } }, [requestedCategory, clearRequestedCategory]);
+  useEffect(() => { if (requestedCategory) { setCategory(requestedCategory); setDestination(''); setLimit(12); clearRequestedCategory(); } }, [requestedCategory, clearRequestedCategory]);
+  useEffect(() => { if (requestedDestination) { setDestination(requestedDestination); setCategory('All'); setSource('All 83'); setQuery(''); setLimit(12); clearRequestedDestination(); } }, [requestedDestination, clearRequestedDestination]);
   const categories = ['All', ...new Set(allListings.map(categoryFor))];
+  const destinationConfig = destinationFilters.find((item) => item.name === destination);
   const filtered = useMemo(() => allListings.filter((item) => {
-    const text = [item.name, item.description, item.overview, item.plan, item.origin, item.end, ...(item.destinations || [])].join(' ').toLowerCase();
+    const text = listingText(item);
     const categoryMatch = category === 'All' || categoryFor(item) === category;
     const sourceMatch = source === 'All 83' || (source === '69 Current Tours' ? item.type === 'current' : item.type === 'official');
-    return categoryMatch && sourceMatch && text.includes(query.toLowerCase().trim());
-  }), [query, category, source]);
-  useEffect(() => setLimit(12), [query, category, source]);
-  return <section className="all-packages" id="packages"><div className="shell"><div className="section-head"><div><p className="kicker">EVERY PUBLISHED PACKAGE</p><h2>All Vijay India Tours</h2><p>{audit.tourRadarListings} current TourRadar packages + {audit.officialListings} official website tours, all with real images and full details.</p></div></div><div className="catalog-tools"><label className="search"><Search/><input value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Search by tour, city or experience"/><b>{filtered.length} found</b></label><div className="source-tabs">{['All 83', '69 Current Tours', '14 Official Tours'].map((label) => <button className={source === label ? 'active' : ''} onClick={() => setSource(label)} key={label}>{label}</button>)}</div></div><div className="category-tabs">{categories.map((name) => <button className={category === name ? 'active' : ''} onClick={() => setCategory(name)} key={name}>{name}</button>)}</div>{filtered.length ? <><div className="trip-grid">{filtered.slice(0, limit).map((item) => <PackageCard key={`${item.type}-${item.id}`} item={item} onOpen={onOpen}/>)}</div>{limit < filtered.length && <button className="load-more" onClick={() => setLimit(filtered.length)}>Show all {filtered.length} packages <ChevronDown/></button>}</> : <div className="empty"><Search/><h3>No package matched</h3><p>Try another destination or clear the filters.</p><button onClick={() => { setQuery(''); setCategory('All'); setSource('All 83'); }}>Clear filters</button></div>}</div></section>;
+    const destinationMatch = !destinationConfig || matchesDestination(item, destinationConfig);
+    return categoryMatch && sourceMatch && destinationMatch && text.includes(query.toLowerCase().trim());
+  }), [query, category, source, destinationConfig]);
+  useEffect(() => setLimit(12), [query, category, source, destination]);
+  return <section className="all-packages" id="packages"><div className="shell"><div className="section-head"><div><p className="kicker">EVERY PUBLISHED PACKAGE</p><h2>All Vijay India Tours</h2><p>{audit.tourRadarListings} current TourRadar packages + {audit.officialListings} official website tours, all with real images and full details.</p></div></div>{destinationConfig && <div className="destination-filter-note"><MapPin/><span>Showing all <b>{destinationConfig.name}</b> packages</span><button onClick={() => setDestination('')}>View every destination <X/></button></div>}<div className="catalog-tools"><label className="search"><Search/><input value={query} onChange={(event) => { setQuery(event.target.value); setDestination(''); }} placeholder="Search by tour, city or experience"/><b>{filtered.length} found</b></label><div className="source-tabs">{['All 83', '69 Current Tours', '14 Official Tours'].map((label) => <button className={source === label ? 'active' : ''} onClick={() => setSource(label)} key={label}>{label}</button>)}</div></div><div className="category-tabs">{categories.map((name) => <button className={category === name && !destination ? 'active' : ''} onClick={() => { setCategory(name); setDestination(''); }} key={name}>{name}</button>)}</div>{filtered.length ? <><div className="trip-grid">{filtered.slice(0, limit).map((item) => <PackageCard key={`${item.type}-${item.id}`} item={item} onOpen={onOpen}/>)}</div>{limit < filtered.length && <button className="load-more" onClick={() => setLimit(filtered.length)}>Show all {filtered.length} packages <ChevronDown/></button>}</> : <div className="empty"><Search/><h3>No package matched</h3><p>Try another destination or clear the filters.</p><button onClick={() => { setQuery(''); setCategory('All'); setSource('All 83'); setDestination(''); }}>Clear filters</button></div>}</div></section>;
 }
 
 const benefits = [
@@ -184,12 +214,14 @@ export default function App() {
   const [modal, setModal] = useState(false);
   const [prefill, setPrefill] = useState('');
   const [requestedCategory, setRequestedCategory] = useState('');
+  const [requestedDestination, setRequestedDestination] = useState('');
   useEffect(() => { const sync = () => { const id = location.hash.match(/^#tour\/(.+)$/)?.[1]; const officialId = location.hash.match(/^#official\/(.+)$/)?.[1]; setSelected(currentListings.find((tour) => tour.id === id) || null); setSelectedOfficial(officialListings.find((tour) => tour.id === officialId) || null); if (id || officialId) scrollTo({ top: 0 }); }; sync(); addEventListener('hashchange', sync); return () => removeEventListener('hashchange', sync); }, []);
   const open = (item) => { location.hash = `${item.type === 'official' ? 'official' : 'tour'}/${item.id}`; };
   const back = () => { location.hash = 'packages'; setSelected(null); setSelectedOfficial(null); setTimeout(() => document.getElementById('packages')?.scrollIntoView(), 30); };
   const enquire = (message = '') => { setPrefill(message); setModal(true); };
   const chooseCategory = (name) => { setRequestedCategory(name); location.hash = 'packages'; setTimeout(() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' }), 30); };
+  const chooseDestination = (name) => { setRequestedDestination(name); location.hash = 'packages'; setTimeout(() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' }), 30); };
   if (selected) return <><Header onEnquire={() => enquire()}/><CurrentDetail item={selected} onBack={back} onEnquire={enquire}/><Footer/><EnquiryModal open={modal} onClose={() => setModal(false)} prefill={prefill}/></>;
   if (selectedOfficial) return <><Header onEnquire={() => enquire()}/><OfficialDetail item={selectedOfficial} onBack={back} onEnquire={enquire}/><Footer/><EnquiryModal open={modal} onClose={() => setModal(false)} prefill={prefill}/></>;
-  return <><Header onEnquire={() => enquire()}/><main><Hero onExplore={() => document.getElementById('popular')?.scrollIntoView({ behavior: 'smooth' })}/><TrustStrip/><QuickLinks onCategory={chooseCategory}/><Popular onOpen={open}/><Collections onCategory={chooseCategory}/><AllPackages onOpen={open} requestedCategory={requestedCategory} clearRequestedCategory={() => setRequestedCategory('')}/><WhyUs/><Gallery/><Contact/></main><Footer/><div className="floating"><button onClick={() => enquire()}><Phone/><span>Request a call back</span></button><a href="https://wa.me/917976064160" target="_blank" rel="noreferrer" aria-label="WhatsApp Vijay India Tours"><MessageCircle/></a></div><EnquiryModal open={modal} onClose={() => setModal(false)} prefill={prefill}/></>;
+  return <><Header onEnquire={() => enquire()}/><main><Hero onExplore={() => document.getElementById('popular')?.scrollIntoView({ behavior: 'smooth' })}/><TrustStrip/><QuickLinks onDestination={chooseDestination}/><Popular onOpen={open}/><Collections onCategory={chooseCategory}/><AllPackages onOpen={open} requestedCategory={requestedCategory} clearRequestedCategory={() => setRequestedCategory('')} requestedDestination={requestedDestination} clearRequestedDestination={() => setRequestedDestination('')}/><WhyUs/><Gallery/><Contact/></main><Footer/><div className="floating"><button onClick={() => enquire()}><Phone/><span>Request a call back</span></button><a href="https://wa.me/917976064160" target="_blank" rel="noreferrer" aria-label="WhatsApp Vijay India Tours"><MessageCircle/></a></div><EnquiryModal open={modal} onClose={() => setModal(false)} prefill={prefill}/></>;
 }
