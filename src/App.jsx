@@ -514,7 +514,7 @@ function AllPackages({ onOpen, requestedCategory, clearRequestedCategory, reques
             <p className="kicker">EVERY COMPLETE PACKAGE</p>
             <h2>All Vijay Tours</h2>
             <p>
-              {audit.tourRadarListings} current India packages + {audit.officialListings} official India tours + 6 Expat Explore international journeys, all with full details.
+              {audit.tourRadarListings} current India packages + {audit.officialListings} official India tours + 6 international journeys, all with full details.
             </p>
           </div>
         </div>
@@ -832,7 +832,7 @@ function CurrentDetail({ item, onBack, onEnquire }) {
           <ArrowLeft /> Back to all packages
         </button>
         <div className="detail-hero-copy">
-          <span>{isInternational ? `${item.provider?.toUpperCase() || 'INTERNATIONAL'} PACKAGE` : categoryFor(item)}</span>
+          <span>{isInternational ? 'INTERNATIONAL TOUR PACKAGE' : categoryFor(item)}</span>
           <h1>{item.name}</h1>
           <p>
             <MapPin />
@@ -972,7 +972,7 @@ function CurrentDetail({ item, onBack, onEnquire }) {
           <div className="source-note">
             <ShieldCheck />
             <p>
-              <b>{isInternational ? `${item.provider} source package` : 'Source-checked package'}</b>
+              <b>{isInternational ? 'Source-checked international package' : 'Source-checked package'}</b>
               <span>{isInternational ? 'The route, duration and package categories are organised from the source tour. Verify current departures, visas, prices and availability with the operator before booking.' : 'Package facts were organised from Vijay’s public listing. Verify live operational details before payment.'}</span>
             </p>
             {item.sourceUrl && (

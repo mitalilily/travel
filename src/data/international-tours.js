@@ -11,7 +11,7 @@ const makeDays = (rows) =>
     place,
     activities: place.toLowerCase().includes("free day")
       ? `Explore ${landmarks.split(",")[0]} independently, or choose from the optional experiences available on this departure.`
-      : `Follow the published Expat Explore programme through ${landmarks}, with guided orientation and scheduled free time along the route.`,
+      : `Follow the published tour programme through ${landmarks}, with guided orientation and scheduled free time along the route.`,
     landmarks,
     transport:
       index === 0 && /start of tour/i.test(place)
@@ -33,9 +33,7 @@ const included = [
 ];
 
 const excluded = [
-  "International flights",
-  "Visas and travel authorisations",
-  "Travel insurance",
+  "Flight booking, visa fees and travel insurance are not included in the package.",
   "Optional excursions and experiences",
   "Airport transfers unless expressly listed",
   "Personal expenses and meals not listed",
@@ -46,7 +44,6 @@ export default [
     id: "expat-europe-taster",
     slug: "europe-taster",
     type: "international",
-    provider: "Expat Explore",
     region: "International",
     name: "Europe Taster",
     description:
@@ -88,7 +85,6 @@ export default [
     id: "expat-classic-europe",
     slug: "classic-europe",
     type: "international",
-    provider: "Expat Explore",
     region: "International",
     name: "Classic Europe",
     description:
@@ -144,7 +140,6 @@ export default [
     id: "expat-europe-escape",
     slug: "europe-escape",
     type: "international",
-    provider: "Expat Explore",
     region: "International",
     name: "Europe Escape",
     description:
@@ -199,7 +194,6 @@ export default [
     id: "expat-europe-explorer",
     slug: "europe-explorer",
     type: "international",
-    provider: "Expat Explore",
     region: "International",
     name: "Europe Explorer",
     description:
@@ -275,7 +269,6 @@ export default [
     id: "expat-eastern-usa-canada",
     slug: "eastern-usa-canada-escape",
     type: "international",
-    provider: "Expat Explore",
     region: "International",
     name: "Eastern USA & Canada Escape",
     description:
@@ -341,7 +334,6 @@ export default [
     id: "expat-eastern-usa-canada-new-york",
     slug: "eastern-usa-canada-escape-new-york",
     type: "international",
-    provider: "Expat Explore",
     region: "International",
     name: "Eastern USA & Canada Escape incl. New York",
     description:
