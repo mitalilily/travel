@@ -36,11 +36,71 @@ function categoryFor(item) {
   return categoryRules.find(([, rule]) => rule.test(text))?.[0] || 'Cultural India';
 }
 
+const officialCopy = {
+  'official-238': {
+    name: 'Golden Triangle: Delhi, Agra & Jaipur',
+    description: 'A five-day introduction to India’s most celebrated trio: Old and New Delhi, the Taj Mahal in Agra, and Jaipur’s forts and palaces. Ideal for a first visit or a short private journey.',
+  },
+  'official-252': {
+    name: 'Golden Triangle & Shekhawati',
+    description: 'See Delhi, Agra and Jaipur, then continue into Shekhawati—Rajasthan’s open-air gallery of painted havelis, quiet towns and old merchant stories.',
+  },
+  'official-280': {
+    name: 'Indian Saga: Rajasthan, Tigers & Varanasi',
+    description: 'A broad two-week portrait of North India, combining the Taj Mahal and Jaipur with village life, Ranthambore’s tiger country and the ghats of Varanasi.',
+  },
+  'official-282': {
+    name: 'Across the Thar Desert',
+    description: 'Travel through the heart of Rajasthan from Shekhawati and Bikaner to golden Jaisalmer, blue Jodhpur and Jaipur. Expect forts, desert landscapes and richly decorated old towns.',
+  },
+  'official-284': {
+    name: 'Taj Mahal, Rajasthan & Udaipur',
+    description: 'Begin with Delhi and the Taj Mahal, continue through Jaipur and Chittorgarh, and finish beside the lakes and palaces of Udaipur.',
+  },
+  'official-371': {
+    name: 'Rishikesh, Varanasi & Spiritual India',
+    description: 'Follow the Ganges from Haridwar and Rishikesh to Varanasi, with a contrast of forest and wildlife in Corbett and Mughal history in Agra.',
+  },
+  'official-374': {
+    name: 'Incredible India, Made for You',
+    description: 'A flexible private journey for travellers who know what they want from India but need help joining the pieces. Tell us your interests and we’ll shape the route around them.',
+  },
+  'official-384': {
+    name: 'India’s Countryside & Heritage Towns',
+    description: 'Step beyond the headline monuments into smaller towns and rural Rajasthan, with time in Jaipur, Deoli, Gwalior and Agra along the way.',
+  },
+  'official-388': {
+    name: 'Rajasthan Adventure Trail',
+    description: 'A varied route through Shekhawati, Bikaner and Jaipur, followed by Ranthambore’s wildlife, Gwalior’s hilltop fort and the Taj Mahal in Agra.',
+  },
+  'official-399': {
+    name: 'Tigers, Temples & the Golden Triangle',
+    description: 'Pair Delhi, Agra and Jaipur with two of India’s great wildlife regions. Ranthambore and Bandhavgarh bring the chance of tiger sightings; Khajuraho adds remarkable temple architecture.',
+  },
+  'official-402': {
+    name: 'India’s Festivals, Up Close',
+    description: 'Plan your journey around Holi, Diwali or another local celebration and experience the festival with people who understand its traditions, timing and best places to be.',
+  },
+  'official-405': {
+    name: 'Life in India: Homestays & Local Hosts',
+    description: 'Travel from Delhi and Agra into rural Rajasthan, staying in family homes and guesthouses before continuing to Udaipur and Jaipur. A more personal look at everyday India.',
+  },
+  'official-407': {
+    name: 'A Taste of North India',
+    description: 'Eat your way from Delhi to Jaipur, Bikaner, Jodhpur and Pushkar. Markets, family recipes and regional specialities turn a classic Rajasthan route into a food-led journey.',
+  },
+  'official-3014': {
+    name: 'Jaipur: The Pink City',
+    description: 'Spend time with Jaipur’s great sights—Amber Fort, City Palace, Jantar Mantar, Hawa Mahal and Jal Mahal—with room for bazaars, crafts and local food.',
+  },
+};
+
 const officialListings = officialTours.map((tour) => ({
   ...tour,
+  ...(officialCopy[tour.id] || {}),
   type: 'official',
   duration: tour.dayCount || null,
-  description: tour.overview,
+  description: officialCopy[tour.id]?.description || tour.overview,
   destinations: tour.plan ? tour.plan.split(/\s*(?:->|>|–|-)\s*/).filter(Boolean) : [],
   origin: tour.plan?.split(/\s*(?:->|>|–|-)\s*/)[0] || 'India',
   end:
@@ -53,10 +113,125 @@ const officialListings = officialTours.map((tour) => ({
   departureYears: [],
 }));
 
-const currentListings = currentTours.map((tour) => ({
-  ...tour,
-  type: 'current',
-}));
+const currentTourNames = {
+  110582: 'Golden Triangle & Ranthambore',
+  248014: 'South India: Temples, Coast & Culture',
+  306427: 'Golden Triangle, Manali & Ladakh',
+  307412: 'Rishikesh Adventure',
+  237027: 'Rajasthan Beyond Jaipur',
+  237616: 'Tigers & Culture in Rajasthan',
+  313150: 'Golden Triangle & Tiger Safari',
+  306773: 'Jaipur Food & Wildlife Journey',
+  319758: 'Rajasthan, Agra & Tiger Safari',
+  315428: 'Spiritual & Royal India',
+  307427: 'Rishikesh Adventure & Wellness',
+  307529: 'Pushkar Fair & Rajasthan Heritage',
+  353974: 'Rajasthan, Agra & Tiger Safari',
+  317405: 'Golden Triangle, Mumbai & Goa',
+  307879: 'Diwali Across the Golden Triangle',
+  356274: 'India’s Palace Train Journey',
+  308417: 'Maldives Island Escape',
+  355865: 'Bali Island Journey',
+  356180: 'Goa Coast Escape',
+  309010: 'Pushkar Fair & Royal Rajasthan',
+  311420: 'Women’s Kerala Backwaters Journey',
+  306366: 'Jaipur, Rajasthan & Delhi',
+  247595: 'Taj Mahal, Tigers & Jaipur',
+  306887: 'Jaipur Heritage & Rajasthan',
+  314416: 'Rajasthan Heritage Escape',
+  170154: 'Backpacking India',
+  353575: 'Taj Mahal & Tiger Country',
+  308570: 'Golden Triangle & Sacred Cities',
+  315745: 'Rajasthan, Khajuraho & Varanasi',
+  313272: 'Amritsar, the Himalayas & Rajasthan',
+  313947: 'Diwali in Varanasi & North India',
+  312984: 'Pushkar Fair & Wildlife Safari',
+  309954: 'North India Temple Trail',
+  309069: 'Women’s Journey Through India',
+  309066: 'Kerala: Hills, Backwaters & Beaches',
+  311856: 'Golden Triangle & Ranthambore',
+  316831: 'Pushkar Fair, Ranthambore & Golden Triangle',
+  316013: 'Delhi, Agra, Bharatpur & Jaipur',
+  310593: 'Eastern Himalayas Journey',
+  308004: 'Char Dham Yatra',
+  308647: 'Diwali Across India',
+  309090: 'Women’s India Journey',
+  314236: 'Culture, Nature & Faith in India',
+  307959: 'Summer Journey Through India',
+  314303: 'Golden Triangle & Ranthambore Short Tour',
+  306318: 'Holi & the Golden Triangle',
+  306355: 'Holi in India',
+  309227: 'Women’s Golden Triangle & Safari',
+  353779: 'India’s Luxury Palace Train',
+  311814: 'Royal Bengal Tiger Safari',
+  317652: 'Rajasthan Heritage & Culture',
+  307986: 'Ladakh in Seven Days',
+  316228: 'Golden Triangle & Rishikesh',
+  314180: 'Rajasthan & Spiritual Central India',
+  316645: 'Diwali, Ayodhya & Golden Triangle',
+  315529: 'Golden Triangle & Rajasthan',
+  309231: 'Himachal Mountain Journey',
+  315554: 'Golden Triangle Short Escape',
+  313256: 'North India Wildlife & Heritage',
+  318812: 'Taj Mahal & Wildlife',
+  317330: 'Golden Triangle & Royal Rajasthan',
+  308539: 'Kashmir Adventure',
+  319746: 'Classic Golden Triangle',
+  306609: 'Luxury Golden Triangle',
+  306654: 'Essential Golden Triangle',
+  318153: 'Golden Triangle & Varanasi',
+  302710: 'Kumbh Mela, Taj Mahal & Rajasthan',
+  306307: 'Golden Triangle & Jaipur Extension',
+  314415: 'Palaces, Temples & Sacred India',
+};
+
+const currentTourIntros = {
+  'Golden Triangle': 'See Delhi, Agra and Jaipur while leaving room for the character of each city.',
+  Wildlife: 'Pair India’s heritage cities with time in its national parks and tiger country.',
+  Rajasthan: 'Follow a Rajasthan route shaped by forts, old cities and desert landscapes.',
+  'South India': 'Move through South India’s temple towns, coast, hills and backwaters.',
+  Himalayas: 'Trade the plains for mountain roads, high passes and Himalayan towns.',
+  Spiritual: 'Explore the places where India’s faith, ritual and everyday life meet.',
+  Festivals: 'Experience India at its most colourful, with the route timed around a major festival.',
+  'Women Only': 'Travel in a women-only group with a comfortable pace and a strong local focus.',
+  'Food & Culture': 'Get to know the region through its markets, kitchens and everyday food culture.',
+  'Coasts & Luxury': 'Slow the pace with coastal stays and carefully chosen city experiences.',
+  'Cultural India': 'See a varied side of India through its cities, landscapes and local culture.',
+};
+
+function cleanPlaceName(value = '') {
+  return String(value)
+    .replace(/\s*\(departure\)\s*/gi, '')
+    .replace(/^.*?\s+to\s+/i, '')
+    .replace(/\s+/g, ' ')
+    .trim();
+}
+
+function readableList(values) {
+  if (values.length <= 1) return values[0] || '';
+  return `${values.slice(0, -1).join(', ')} and ${values.at(-1)}`;
+}
+
+function buildCurrentDescription(tour) {
+  const category = categoryFor(tour);
+  const intro = currentTourIntros[category] || currentTourIntros['Cultural India'];
+  const places = [...new Set((tour.destinations || []).map(cleanPlaceName).filter(Boolean))].slice(0, 5);
+  const route = places.length ? ` Highlights include ${readableList(places)}.` : '';
+  return `${intro} This ${tour.duration}-day journey travels from ${cleanPlaceName(tour.origin)} to ${cleanPlaceName(tour.end)}.${route}`;
+}
+
+const currentListings = currentTours.map((tour) => {
+  const item = {
+    ...tour,
+    name: currentTourNames[tour.id] || tour.name,
+    type: 'current',
+  };
+
+  return {
+    ...item,
+    description: buildCurrentDescription(item),
+  };
+});
 const internationalListings = internationalTours;
 const allListings = [...currentListings, ...officialListings, ...internationalListings];
 const destinationFilters = [
@@ -183,30 +358,30 @@ function Hero({ onExplore }) {
       ))}
       <div className="hero-shade" />
       <div className="shell hero-copy">
-        <p className="hero-kicker">VIJAY INDIA TOURS · JAIPUR</p>
+        <p className="hero-kicker">PRIVATE TOURS · PLANNED IN JAIPUR</p>
         <h1>
-          Discover India.
+          See more than
           <br />
-          And the world.
+          the postcards.
         </h1>
-        <p>Private journeys across India, Europe, the USA and Canada—personally planned for you.</p>
+        <p>Thoughtful India tours and carefully chosen journeys abroad, with clear itineraries and a real team to help you plan.</p>
         <button className="hero-cta" onClick={onExplore}>
-          Explore all 89 packages <ArrowRight size={18} />
+          Find your trip <ArrowRight size={18} />
         </button>
         <div className="hero-facts">
           <span>
-            <b>30+</b> years
+            <b>30+</b> years in travel
           </span>
           <span>
-            <b>89</b> complete tours
+            <b>89</b> journeys to explore
           </span>
           <span>
-            <b>898</b> itinerary days
+            <b>1</b> Jaipur-based team
           </span>
         </div>
       </div>
       <div className="play-chip">
-        <span className="pulse" /> INDIA ROOTS · WORLDWIDE JOURNEYS
+        <span className="pulse" /> INDIA EXPERTISE · JOURNEYS WORLDWIDE
       </div>
     </section>
   );
@@ -219,29 +394,29 @@ function TrustStrip() {
         <div>
           <Star fill="#ffc107" strokeWidth={0} />
           <span>
-            <b>5.0 operator rating</b>
-            <small>TourRadar profile</small>
+            <b>Rated 5.0</b>
+            <small>By TourRadar travellers</small>
           </span>
         </div>
         <div>
           <Headphones />
           <span>
-            <b>Under 1 hour</b>
-            <small>Typical response time</small>
+            <b>Quick, personal replies</b>
+            <small>Usually within an hour</small>
           </span>
         </div>
         <div>
           <ShieldCheck />
           <span>
-            <b>Private & personalised</b>
-            <small>Dates built around you</small>
+            <b>Private by design</b>
+            <small>Your dates, pace and comfort</small>
           </span>
         </div>
         <div>
           <Languages />
           <span>
             <b>English & German</b>
-            <small>Languages available</small>
+            <small>Speak directly with the team</small>
           </span>
         </div>
       </div>
@@ -281,11 +456,11 @@ function TravelPanel({ id, eyebrow, title, copy, video, items, onOpen, onExplore
           <h2>{title}</h2>
           <span>{copy}</span>
           <button onClick={onExplore}>
-            Explore all <ArrowRight />
+            See the trips <ArrowRight />
           </button>
         </div>
         <div className="journey-sound-label">
-          <span /> DESTINATION FILM
+          <span /> SEE THE DESTINATION
         </div>
       </div>
       <div className="journey-rail" aria-label={`${title} packages`}>
@@ -304,13 +479,13 @@ function JourneyShowcase({ onOpen, onCategory }) {
       <div className="shell">
         <div className="journey-intro">
           <div>
-            <p className="kicker">TWO WORLDS, ONE PERSONAL TEAM</p>
-            <h2>Where do you want to go next?</h2>
+            <p className="kicker">START WITH THE PLACE</p>
+            <h2>A journey you can picture—and plan.</h2>
           </div>
-          <p>Watch the destination, swipe the journeys and open every day of the itinerary.</p>
+          <p>Browse real routes, compare prices and read the full itinerary before you enquire.</p>
         </div>
-        <TravelPanel id="international-trips" tone="international" eyebrow="BEYOND BORDERS" title="International Trips" copy="Europe’s grand routes and the landmark cities and landscapes of eastern North America." video={internationalVideo} items={internationalListings} onOpen={onOpen} onExplore={() => onCategory('International')} />
-        <TravelPanel id="india-trips" tone="india" eyebrow="INCREDIBLE, PERSONAL, YOURS" title="India Trips" copy="Palaces, wildlife, mountains, temples and backwaters—planned from our home in Jaipur." video={indiaVideo} items={indiaPicks} onOpen={onOpen} onExplore={() => onCategory('All')} />
+        <TravelPanel id="international-trips" tone="international" eyebrow="EUROPE & NORTH AMERICA" title="International Journeys" copy="From Paris and the Swiss Alps to New York and Niagara—well-paced routes with the details laid out up front." video={internationalVideo} items={internationalListings} onOpen={onOpen} onExplore={() => onCategory('International')} />
+        <TravelPanel id="india-trips" tone="india" eyebrow="INDIA, OUR HOME GROUND" title="India, Up Close" copy="Palaces at sunrise, tiger country, Himalayan roads and Kerala backwaters—planned with local knowledge from Jaipur." video={indiaVideo} items={indiaPicks} onOpen={onOpen} onExplore={() => onCategory('All')} />
       </div>
     </section>
   );
@@ -321,10 +496,10 @@ function QuickLinks({ onDestination }) {
     <section className="quick shell" aria-labelledby="destination-title">
       <div className="quick-heading">
         <div>
-          <p className="kicker">CHOOSE YOUR DESTINATION</p>
-          <h2 id="destination-title">Explore India city by city</h2>
+          <p className="kicker">WHERE IN INDIA?</p>
+          <h2 id="destination-title">Choose a place. See the right tours.</h2>
         </div>
-        <p>Tap a city to see every matching Vijay package.</p>
+        <p>Start with a city or region and we’ll narrow the collection for you.</p>
       </div>
       <div className="destination-rail">
         {destinationFilters.map((destination) => {
@@ -385,7 +560,7 @@ function PackageCard({ item, onOpen }) {
             {item.price && <small>per person</small>}
           </div>
           <button onClick={() => onOpen(item)}>
-            Full details <ArrowRight size={15} />
+            View itinerary <ArrowRight size={15} />
           </button>
         </div>
       </div>
@@ -398,12 +573,12 @@ function Popular({ onOpen }) {
     <section className="section shell" id="popular">
       <div className="section-head">
         <div>
-          <p className="kicker">POPULAR VIJAY JOURNEYS</p>
-          <h2>India & International Tours</h2>
-          <p>Open any package for its complete day-by-day plan, inclusions and exclusions.</p>
+          <p className="kicker">GOOD PLACES TO START</p>
+          <h2>Trips travellers ask for most</h2>
+          <p>Compare the route, pace, included services and price before you decide.</p>
         </div>
         <a href="#packages">
-          View all 89 <ArrowRight size={16} />
+          Browse all 89 <ArrowRight size={16} />
         </a>
       </div>
       <div className="trip-grid featured-grid">
@@ -419,22 +594,22 @@ function Collections({ onCategory }) {
   const picks = [
     {
       name: 'Rajasthan',
-      subtitle: 'Forts, palaces & desert routes',
+      subtitle: 'Palaces, blue cities & desert nights',
       tour: currentTours.find((tour) => /rajasthan/i.test(tour.name)) || currentTours[0],
     },
     {
       name: 'International',
-      subtitle: 'Europe & North American icons',
+      subtitle: 'Europe’s classics & North America’s east',
       tour: internationalListings[0],
     },
     {
       name: 'Wildlife',
-      subtitle: 'Tigers, safaris & culture',
+      subtitle: 'Tiger reserves & days in the wild',
       tour: currentTours.find((tour) => /tiger/i.test(tour.name)) || currentTours[0],
     },
     {
       name: 'South India',
-      subtitle: 'Temples, hills & backwaters',
+      subtitle: 'Temple towns, tea hills & backwaters',
       tour: currentTours.find((tour) => /south india/i.test(tour.name)) || currentTours[1],
     },
   ];
@@ -443,9 +618,9 @@ function Collections({ onCategory }) {
       <div className="shell">
         <div className="section-head">
           <div>
-            <p className="kicker">TRAVEL YOUR STYLE</p>
-            <h2>Featured Collections</h2>
-            <p>India expertise paired with published journeys across Europe and North America.</p>
+            <p className="kicker">TRAVEL BY INTEREST</p>
+            <h2>Find the trip that feels like you</h2>
+            <p>Start with the experience you want; the right route can follow.</p>
           </div>
         </div>
         <div className="destination-grid">
@@ -456,7 +631,7 @@ function Collections({ onCategory }) {
                 <p>{pick.subtitle}</p>
                 <h3>{pick.name}</h3>
                 <span>
-                  Explore packages <ArrowRight size={17} />
+                  See this collection <ArrowRight size={17} />
                 </span>
               </div>
             </button>
@@ -511,10 +686,10 @@ function AllPackages({ onOpen, requestedCategory, clearRequestedCategory, reques
       <div className="shell">
         <div className="section-head">
           <div>
-            <p className="kicker">EVERY COMPLETE PACKAGE</p>
-            <h2>All Vijay Tours</h2>
+            <p className="kicker">THE FULL COLLECTION</p>
+            <h2>Find your next journey</h2>
             <p>
-              {audit.tourRadarListings} current India packages + {audit.officialListings} official India tours + 6 international journeys, all with full details.
+              Explore {audit.tourRadarListings} current India departures, {audit.officialListings} flexible Vijay itineraries and 6 international journeys. Every route opens into a full day-by-day plan.
             </p>
           </div>
         </div>
@@ -522,10 +697,10 @@ function AllPackages({ onOpen, requestedCategory, clearRequestedCategory, reques
           <div className="destination-filter-note">
             <MapPin />
             <span>
-              Showing all <b>{destinationConfig.name}</b> packages
+              Tours visiting <b>{destinationConfig.name}</b>
             </span>
             <button onClick={() => setDestination('')}>
-              View every destination <X />
+              Clear destination <X />
             </button>
           </div>
         )}
@@ -538,9 +713,9 @@ function AllPackages({ onOpen, requestedCategory, clearRequestedCategory, reques
                 setQuery(event.target.value);
                 setDestination('');
               }}
-              placeholder="Search by tour, city, country or experience"
+              placeholder="Search a place, tour or experience"
             />
-            <b>{filtered.length} found</b>
+            <b>{filtered.length} matches</b>
           </label>
           <div className="source-tabs">
             {['All 89', '69 Current India', '14 Official India', '6 International'].map((label) => (
@@ -573,15 +748,15 @@ function AllPackages({ onOpen, requestedCategory, clearRequestedCategory, reques
             </div>
             {limit < filtered.length && (
               <button className="load-more" onClick={() => setLimit(filtered.length)}>
-                Show all {filtered.length} packages <ChevronDown />
+                See all {filtered.length} trips <ChevronDown />
               </button>
             )}
           </>
         ) : (
           <div className="empty">
             <Search />
-            <h3>No package matched</h3>
-            <p>Try another destination or clear the filters.</p>
+            <h3>We couldn’t find that trip</h3>
+            <p>Try a different place or remove one of the filters.</p>
             <button
               onClick={() => {
                 setQuery('');
@@ -590,7 +765,7 @@ function AllPackages({ onOpen, requestedCategory, clearRequestedCategory, reques
                 setDestination('');
               }}
             >
-              Clear filters
+              Reset search
             </button>
           </div>
         )}
@@ -600,12 +775,12 @@ function AllPackages({ onOpen, requestedCategory, clearRequestedCategory, reques
 }
 
 const benefits = [
-  [Compass, 'India Roots, Global Planning', 'Journeys are shaped by an experienced Jaipur-based family team led by Mr. Singh.'],
-  [Users, 'Private, Personal Journeys', 'Trip pace, hotel level and experiences can be adjusted around your travellers.'],
-  [Headphones, 'Responsive Trip Support', 'Direct planning support before and throughout your India or international journey.'],
-  [CircleCheck, 'Complete Itineraries', 'Every package includes its route, daily activities and trip categories.'],
-  [ShieldCheck, 'Clear Package Details', 'Prices, dates, inclusions and exclusions are presented clearly before you enquire.'],
-  [Hotel, 'India & Worldwide', 'Golden Triangle, Rajasthan, wildlife, European icons and North American cities.'],
+  [Compass, 'Planned by people who know India', 'Our Jaipur team brings more than 30 years of practical route knowledge to every India journey.'],
+  [Users, 'Your trip, not a template', 'Adjust the pace, hotel style and experiences to suit the people you are travelling with.'],
+  [Headphones, 'Help before and during travel', 'Speak with the same team while you plan and whenever you need support on the road.'],
+  [CircleCheck, 'The full route before you book', 'Read the day-by-day plan, transport notes and important inclusions without chasing for basics.'],
+  [ShieldCheck, 'Straight answers on cost', 'See published prices where available and know what still needs to be confirmed before payment.'],
+  [Hotel, 'One team, near and far', 'Plan India in depth, or choose selected routes through Europe and eastern North America.'],
 ];
 
 function WhyUs() {
@@ -613,9 +788,9 @@ function WhyUs() {
     <section className="why" id="why">
       <div className="shell">
         <div className="center-head">
-          <p className="kicker">WHY VIJAY INDIA TOURS?</p>
-          <h2>Personal travel, handled with care.</h2>
-          <p>Planning from Jaipur, backed by three decades of India knowledge and a fresh worldwide collection.</p>
+          <p className="kicker">WHY TRAVELLERS CHOOSE VIJAY</p>
+          <h2>Advice that comes from experience.</h2>
+          <p>Talk to a Jaipur-based team that knows the routes, answers the practical questions and stays close when plans change.</p>
         </div>
         <div className="benefits">
           {benefits.map(([Icon, title, text]) => (
@@ -638,8 +813,8 @@ function Gallery() {
     <section className="moments" id="stories">
       <div className="shell">
         <div className="center-head">
-          <p className="kicker">JOURNEYS IN PICTURES</p>
-          <h2>India and the world with Vijay</h2>
+          <p className="kicker">A GLIMPSE OF THE ROAD</p>
+          <h2>Places worth travelling for</h2>
         </div>
         <div className="moment-grid">
           {galleryTours.map((tour, index) => (
@@ -663,15 +838,15 @@ function ContactForm({ prefill = '' }) {
     return (
       <div className="form-success">
         <Check />
-        <h3>Your enquiry is ready</h3>
-        <p>WhatsApp opened with your details. Tap send there to contact Vijay India Tours.</p>
-        <button onClick={() => setSent(false)}>Prepare another enquiry</button>
+        <h3>You’re one tap away</h3>
+        <p>We opened WhatsApp with your details. Review the message, add anything useful and tap send when you’re ready.</p>
+        <button onClick={() => setSent(false)}>Start a different enquiry</button>
       </div>
     );
   const submit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const message = [`Hello Vijay India Tours, I would like a personal tour plan.`, `Name: ${data.get('name')}`, `Phone: ${data.get('phone')}`, `Email: ${data.get('email') || 'Not provided'}`, `Preferred dates: ${data.get('dates') || 'Flexible'}`, `Package / request: ${data.get('message') || 'Please help me choose.'}`].join('\n');
+    const message = [`Hello Vijay India Tours, I’d like help planning a trip.`, `Name: ${data.get('name')}`, `Phone: ${data.get('phone')}`, `Email: ${data.get('email') || 'Not provided'}`, `Preferred dates: ${data.get('dates') || 'Flexible'}`, `Trip idea: ${data.get('message') || 'I’d like help choosing the right tour.'}`].join('\n');
     window.open(`https://wa.me/917976064160?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
     setSent(true);
   };
@@ -694,15 +869,15 @@ function ContactForm({ prefill = '' }) {
         <input name="email" type="email" placeholder="you@example.com" />
       </label>
       <label>
-        Package or travel request
-        <textarea name="message" defaultValue={prefill} placeholder="Which tour are you interested in?" />
+        Where would you like to go?
+        <textarea name="message" defaultValue={prefill} placeholder="Share a destination, tour name or the kind of trip you have in mind." />
       </label>
       <button className="submit">
-        Continue on WhatsApp <ArrowRight size={17} />
+        Review in WhatsApp <ArrowRight size={17} />
       </button>
       <small>
         <ShieldCheck />
-        Nothing is sent until you confirm it in WhatsApp.
+        You can review and edit the message before sending it.
       </small>
     </form>
   );
@@ -714,8 +889,8 @@ function Contact() {
       <div className="shell contact-grid">
         <div className="contact-art" style={{ backgroundImage: `url(${currentTours[5].image})` }}>
           <div>
-            <p>YOUR NEXT JOURNEY STARTS HERE</p>
-            <h2>Plan directly with Vijay.</h2>
+            <p>TALK TO THE TEAM WHO PLANS IT</p>
+            <h2>Have dates in mind? Let’s shape the trip.</h2>
             <span>
               <Phone />
               {CONTACT.phone}
@@ -731,8 +906,8 @@ function Contact() {
           </div>
         </div>
         <div className="contact-form">
-          <p className="kicker">GET IN TOUCH</p>
-          <h2>Build a personal itinerary</h2>
+          <p className="kicker">START A CONVERSATION</p>
+          <h2>Tell us what you’re imagining</h2>
           <ContactForm />
         </div>
       </div>
@@ -747,7 +922,7 @@ function Footer() {
       <div className="shell footer-grid">
         <div className="footer-brand">
           <Logo light />
-          <p>Private India and international journeys, personally planned from Jaipur by a family team with more than three decades of experience.</p>
+          <p>Based in Jaipur and planning journeys for more than 30 years. Come with a tour in mind, or simply tell us where you want to go.</p>
         </div>
         <div>
           <h3>Tour Collections</h3>
@@ -781,7 +956,7 @@ function Footer() {
         </div>
       </div>
       <div className="copyright shell">
-        © 2026 Vijay India Tours. <span>Prices, hotels and departures are reconfirmed before booking.</span>
+        © 2026 Vijay India Tours. <span>Every price, hotel and departure is reconfirmed before you book.</span>
       </div>
     </footer>
   );
@@ -801,9 +976,9 @@ function EnquiryModal({ open, onClose, prefill }) {
         <button className="modal-close" onClick={onClose}>
           <X />
         </button>
-        <p className="kicker">PLAN WITH VIJAY</p>
-        <h2>Tell us about your trip</h2>
-        <p>Dates and availability are confirmed personally by the Jaipur team.</p>
+        <p className="kicker">A FEW DETAILS ARE ENOUGH</p>
+        <h2>Let’s find the right trip</h2>
+        <p>Share what you know so far—destination, dates and who is travelling. The Jaipur team will take it from there.</p>
         <ContactForm prefill={prefill} />
       </div>
     </div>
@@ -829,10 +1004,10 @@ function CurrentDetail({ item, onBack, onEnquire }) {
       <section className="detail-hero" style={{ backgroundImage: `url(${item.image})` }}>
         <div className="detail-overlay" />
         <button className="back" onClick={onBack}>
-          <ArrowLeft /> Back to all packages
+          <ArrowLeft /> Back to tours
         </button>
         <div className="detail-hero-copy">
-          <span>{isInternational ? 'INTERNATIONAL TOUR PACKAGE' : categoryFor(item)}</span>
+          <span>{isInternational ? 'INTERNATIONAL JOURNEY' : categoryFor(item)}</span>
           <h1>{item.name}</h1>
           <p>
             <MapPin />
@@ -859,7 +1034,7 @@ function CurrentDetail({ item, onBack, onEnquire }) {
       <section className="shell detail-layout">
         <div className="detail-main">
           <section id="overview" className="detail-section">
-            <p className="kicker">PACKAGE OVERVIEW</p>
+            <p className="kicker">YOUR JOURNEY AT A GLANCE</p>
             <h2>{item.name}</h2>
             <p className="lead">{item.description}</p>
             <div className="style-chips">
@@ -867,7 +1042,7 @@ function CurrentDetail({ item, onBack, onEnquire }) {
                 <span key={style}>{style}</span>
               ))}
             </div>
-            <h3>{isInternational ? 'Journey route' : 'Published route'}</h3>
+            <h3>Your route</h3>
             <div className="route-line">
               {item.destinations.map((place, index) => (
                 <span key={`${place}-${index}`}>
@@ -879,9 +1054,9 @@ function CurrentDetail({ item, onBack, onEnquire }) {
             </div>
           </section>
           <section id="itinerary" className="detail-section">
-            <p className="kicker">EVERY DAY, CLEARLY SHOWN</p>
-            <h2>Complete {item.duration}-day itinerary</h2>
-            <p className="section-intro">All {item.days.length} days are displayed below—nothing is hidden inside closed accordions.</p>
+            <p className="kicker">DAY BY DAY</p>
+            <h2>What your {item.duration} days look like</h2>
+            <p className="section-intro">Here is the complete route, including travel days, guided time and the days you can make your own.</p>
             <div className="timeline">
               {item.days.map((day) => (
                 <article className="day" key={`${item.id}-${day.day}`}>
@@ -893,13 +1068,13 @@ function CurrentDetail({ item, onBack, onEnquire }) {
                     <h3>{day.place}</h3>
                     {day.activities && (
                       <p>
-                        <strong>Included activities</strong>
+                        <strong>Day plan</strong>
                         {day.activities}
                       </p>
                     )}
                     {day.landmarks && (
                       <p>
-                        <strong>Landmarks</strong>
+                        <strong>Places</strong>
                         {day.landmarks}
                       </p>
                     )}
@@ -921,20 +1096,20 @@ function CurrentDetail({ item, onBack, onEnquire }) {
                         {day.optional}
                       </p>
                     )}
-                    {!day.activities && !day.transport && !day.optional && <p>Arrival, departure or free time as listed in the itinerary.</p>}
+                    {!day.activities && !day.transport && !day.optional && <p>A travel day or time at leisure, as noted in the itinerary.</p>}
                   </div>
                 </article>
               ))}
             </div>
           </section>
           <section id="included" className="detail-section">
-            <p className="kicker">WHAT THE PACKAGE COVERS</p>
-            <h2>Inclusions & exclusions</h2>
+            <p className="kicker">WHAT’S COVERED</p>
+            <h2>Included—and what to budget for</h2>
             <div className="include-grid">
               <div>
                 <h3>
                   <CircleCheck />
-                  Included categories
+                  Included in the tour
                 </h3>
                 <ul>
                   {item.included.map((text) => (
@@ -945,7 +1120,7 @@ function CurrentDetail({ item, onBack, onEnquire }) {
               <div className="excluded">
                 <h3>
                   <X />
-                  Not included
+                  Plan and pay separately
                 </h3>
                 <ul>
                   {item.excluded.map((text) => (
@@ -954,13 +1129,13 @@ function CurrentDetail({ item, onBack, onEnquire }) {
                 </ul>
               </div>
             </div>
-            <p className="fine-print">{isInternational ? 'These package categories follow the source operator’s published tour information. Confirm the exact departure, hotels and services before payment.' : 'These are the exact public inclusion and exclusion categories. The final quote itemises the specific hotels, transfers and services for your dates.'}</p>
+            <p className="fine-print">{isInternational ? 'These details follow the published tour information. We will confirm the exact departure, hotels and services with you before any payment.' : 'These details follow the public package listing. Your final quote will name the exact hotels, transfers and services for your dates.'}</p>
           </section>
           <section id="dates" className="detail-section">
-            <p className="kicker">CHOOSE YOUR TRAVEL TIME</p>
-            <h2>{isInternational ? 'Published group departures' : 'Flexible private departures'}</h2>
-            <p className="lead">{isInternational ? 'Departure dates, availability and prices can change. Open the original package below for the operator’s latest booking status.' : 'Choose a preferred month; the team will confirm live availability, hotels and the final price for your dates.'}</p>
-            <div className="year-row">{item.departureYears.length ? item.departureYears.map((year) => <span key={year}>{year}</span>) : <span>Currently on request</span>}</div>
+            <p className="kicker">WHEN CAN YOU GO?</p>
+            <h2>{isInternational ? 'Choose from scheduled departures' : 'Travel on dates that suit you'}</h2>
+            <p className="lead">{isInternational ? 'Departure dates and prices can change as places fill. Check the source tour or ask us to confirm what is currently available.' : 'Tell us your preferred month and we’ll check hotels, transport and the final price for your dates.'}</p>
+            <div className="year-row">{item.departureYears.length ? item.departureYears.map((year) => <span key={year}>{year}</span>) : <span>Ask for the next available dates</span>}</div>
             {!isInternational && (
               <div className="month-row">
                 {months.map((month) => (
@@ -972,35 +1147,35 @@ function CurrentDetail({ item, onBack, onEnquire }) {
           <div className="source-note">
             <ShieldCheck />
             <p>
-              <b>{isInternational ? 'Source-checked international package' : 'Source-checked package'}</b>
-              <span>{isInternational ? 'The route, duration and package categories are organised from the source tour. Verify current departures, visas, prices and availability with the operator before booking.' : 'Package facts were organised from Vijay’s public listing. Verify live operational details before payment.'}</span>
+              <b>{isInternational ? 'Route details checked' : 'Package details checked'}</b>
+              <span>{isInternational ? 'The route and duration follow the published tour. Ask us to recheck departures, visa requirements, price and availability before you book.' : 'The route and package details follow Vijay’s public listing. We’ll reconfirm the live arrangements before payment.'}</span>
             </p>
             {item.sourceUrl && (
               <a href={item.sourceUrl} target="_blank" rel="noreferrer">
-                Original listing <ExternalLink />
+                View source tour <ExternalLink />
               </a>
             )}
           </div>
         </div>
         <aside className="booking-card">
-          <p>STARTING FROM</p>
+          <p>FROM</p>
           <strong>{money(item.price)}</strong>
-          <span>{item.price ? `per person · ${isInternational ? 'source guide price' : 'published price'}` : 'Contact the operator for current departures'}</span>
+          <span>{item.price ? `per person · ${isInternational ? 'guide price' : 'published price'}` : 'Ask us for the latest departure price'}</span>
           <div className="booking-line">
             <CalendarDays />
             <p>
               <b>{dateLabel(item)}</b>
-              <small>Live availability on enquiry</small>
+              <small>We’ll confirm availability before you book</small>
             </p>
           </div>
-          <button onClick={() => onEnquire(`I am interested in “${item.name}” (${item.duration} days).`)}>Check dates & get details</button>
+          <button onClick={() => onEnquire(`I’m interested in “${item.name}” (${item.duration} days). Please share the latest dates and price.`)}>Ask about this trip</button>
           <a href={`https://wa.me/917976064160?text=${encodeURIComponent(`Hello Vijay India Tours, I am interested in ${item.name}.`)}`} target="_blank" rel="noreferrer">
             <MessageCircle />
-            Ask on WhatsApp
+            Chat on WhatsApp
           </a>
           <small>
             <ShieldCheck />
-            No payment required to enquire
+            Enquire first. Decide when you’re ready.
           </small>
         </aside>
       </section>
@@ -1014,10 +1189,10 @@ function OfficialDetail({ item, onBack, onEnquire }) {
       <section className="detail-hero" style={{ backgroundImage: `url(${item.image})` }}>
         <div className="detail-overlay" />
         <button className="back" onClick={onBack}>
-          <ArrowLeft /> Back to all packages
+          <ArrowLeft /> Back to tours
         </button>
         <div className="detail-hero-copy">
-          <span>VIJAY OFFICIAL TOUR</span>
+          <span>VIJAY SIGNATURE JOURNEY</span>
           <h1>{item.name}</h1>
           <p>
             <MapPin />
@@ -1044,15 +1219,15 @@ function OfficialDetail({ item, onBack, onEnquire }) {
       <section className="shell detail-layout">
         <div className="detail-main">
           <section id="overview" className="detail-section">
-            <p className="kicker">OFFICIAL TOUR OVERVIEW</p>
+            <p className="kicker">THE JOURNEY AT A GLANCE</p>
             <h2>{item.name}</h2>
-            <p className="lead full-copy">{item.overview}</p>
-            <h3>Tour plan</h3>
+            <p className="lead full-copy">{item.description}</p>
+            <h3>Proposed route</h3>
             <div className="official-plan">{item.plan || 'A custom route prepared around your dates and interests.'}</div>
           </section>
           <section id="itinerary" className="detail-section">
-            <p className="kicker">COMPLETE PUBLISHED PLAN</p>
-            <h2>{item.days.length ? `All ${item.days.length} itinerary days` : 'Custom day-by-day itinerary'}</h2>
+            <p className="kicker">DAY BY DAY</p>
+            <h2>{item.days.length ? `Your ${item.days.length}-day route` : 'A day-by-day plan made for you'}</h2>
             {item.days.length ? (
               <div className="timeline official-timeline">
                 {item.days.map((day) => (
@@ -1069,18 +1244,18 @@ function OfficialDetail({ item, onBack, onEnquire }) {
                 ))}
               </div>
             ) : (
-              <p className="lead">This official listing is designed as a flexible custom tour. Vijay’s team prepares the exact sequence after your enquiry.</p>
+              <p className="lead">This is a flexible private journey. Share your dates and interests, and Vijay’s team will arrange the days in the order that works best.</p>
             )}
           </section>
           <section id="highlights" className="detail-section">
-            <p className="kicker">TOUR HIGHLIGHTS</p>
-            <h2>What you’ll experience</h2>
-            <div className="highlight-copy">{item.highlights || 'Highlights are tailored around your route, travel dates and interests.'}</div>
+            <p className="kicker">WHAT STANDS OUT</p>
+            <h2>Experiences along the way</h2>
+            <div className="highlight-copy">{item.highlights || 'We’ll shape the highlights around your route, travel dates and the experiences you care about most.'}</div>
           </section>
           <section id="dates" className="detail-section">
-            <p className="kicker">DATES, SERVICES & PRICE</p>
-            <h2>Prepared for your travel dates</h2>
-            <p className="lead">The official listing does not publish fixed departure dates or a complete service breakdown. Send your preferred dates to receive live availability, hotels, transport, inclusions, exclusions and the final quote.</p>
+            <p className="kicker">YOUR DATES, YOUR QUOTE</p>
+            <h2>Choose when you want to travel</h2>
+            <p className="lead">Because this is a private tour, the final price depends on your dates, hotels and group size. Send us the basics and we’ll return with available hotels, transport and a clear quote.</p>
             <div className="month-row">
               {months.map((month) => (
                 <span key={month}>{month}</span>
@@ -1090,26 +1265,26 @@ function OfficialDetail({ item, onBack, onEnquire }) {
           <div className="source-note">
             <ShieldCheck />
             <p>
-              <b>Official Vijay listing</b>
-              <span>The overview, route, day plan, highlights, image and price above come from Vijay India Tours’ own package page.</span>
+              <b>Vijay package details</b>
+              <span>The route, day plan, highlights and guide price come from Vijay India Tours’ own published package.</span>
             </p>
             <a href={item.sourceUrl} target="_blank" rel="noreferrer">
-              Original listing <ExternalLink />
+              View source tour <ExternalLink />
             </a>
           </div>
         </div>
         <aside className="booking-card">
-          <p>PUBLISHED FROM</p>
+          <p>GUIDE PRICE FROM</p>
           <strong>{money(item.price)}</strong>
-          <span>guide price · final quote on request</span>
+          <span>per person · final quote depends on your dates</span>
           <div className="booking-line">
             <CalendarDays />
             <p>
               <b>Dates on request</b>
-              <small>Any month · live confirmation</small>
+              <small>Travel in any month, subject to availability</small>
             </p>
           </div>
-          <button onClick={() => onEnquire(`I am interested in the official tour “${item.name}”.`)}>Get complete live quote</button>
+          <button onClick={() => onEnquire(`I’m interested in “${item.name}”. Please help me plan it for my dates.`)}>Plan this trip with us</button>
           <a href={CONTACT.phoneHref}>
             <Phone />
             Call {CONTACT.phone}

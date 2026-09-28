@@ -10,33 +10,33 @@ const makeDays = (rows) =>
     day: index + 1,
     place,
     activities: place.toLowerCase().includes("free day")
-      ? `Explore ${landmarks.split(",")[0]} independently, or choose from the optional experiences available on this departure.`
-      : `Follow the published tour programme through ${landmarks}, with guided orientation and scheduled free time along the route.`,
+      ? `${landmarks.split(",")[0]} is yours today. Explore independently or add one of the optional experiences available for this departure.`
+      : `Today’s route covers ${landmarks}, with guided orientation and free time where the schedule allows.`,
     landmarks,
     transport:
       index === 0 && /start of tour/i.test(place)
         ? "Join the tour coach"
         : "Air-conditioned tour coach",
-    meals: "Breakfast; selected included dinners as published",
+    meals: "Breakfast, with selected dinners on specified days",
     optional: place.toLowerCase().includes("free day")
-      ? "Optional excursions can be booked subject to availability."
+      ? "Optional experiences are available at extra cost and subject to availability."
       : "",
   }));
 
 const included = [
-  "3- and 4-star hotel accommodation",
-  "Breakfast and selected group dinners",
-  "Modern air-conditioned coach transport",
-  "Services of an experienced tour leader",
-  "Included sightseeing and experiences listed in the itinerary",
-  "Tour taxes and fees listed by the operator",
+  "Comfortable 3- and 4-star hotels",
+  "Breakfast daily, plus selected group dinners",
+  "Travel between stops by modern air-conditioned coach",
+  "An experienced tour leader throughout",
+  "All sightseeing and experiences marked as included",
+  "Tour taxes and listed operator fees",
 ];
 
 const excluded = [
   "Flight booking, visa fees and travel insurance are not included in the package.",
-  "Optional excursions and experiences",
-  "Airport transfers unless expressly listed",
-  "Personal expenses and meals not listed",
+  "Optional excursions and personal upgrades",
+  "Airport transfers unless included for your departure",
+  "Meals, drinks and personal expenses not listed",
 ];
 
 export default [
@@ -47,7 +47,7 @@ export default [
     region: "International",
     name: "Europe Taster",
     description:
-      "A fast-paced introduction to Paris, the Swiss Alps, Germany’s Rhine Valley, Amsterdam and Ghent, beginning and ending in London.",
+      "Short on time but keen to see Europe’s headline sights? This one-week loop travels from London to Paris, the Swiss Alps, the Rhine Valley and Amsterdam, with a final stop in Ghent before returning to London.",
     image: europeTasterImage,
     sourceImageUrl:
       "https://images.ctfassets.net/huwbudysxepr/6oE0114NOmrcJm1EwA3ruJ/576000bd23b2ace6aed6d89d6a0b9b4b/Europe-Taster.jpg",
@@ -88,7 +88,7 @@ export default [
     region: "International",
     name: "Classic Europe",
     description:
-      "A classic two-week loop from London through France, Switzerland, Italy, Austria, Germany, the Netherlands and Belgium.",
+      "A rewarding first journey through Europe: two weeks, eight countries and time in Paris, the Swiss Alps, Tuscany, Rome, Venice, Munich and Amsterdam. It is lively, social and packed with the places most travellers want to see first.",
     image: classicEuropeImage,
     sourceImageUrl:
       "https://images.ctfassets.net/huwbudysxepr/4ZeToCHD8HsT94r0jOSjg7/05792d9dee58db0e39d0b642566e25e9/Classic-Europe.jpg",
@@ -143,7 +143,7 @@ export default [
     region: "International",
     name: "Europe Escape",
     description:
-      "A 12-day European circuit from Rome through Venice, Bavaria, Amsterdam, Paris, the Swiss Alps, Tuscany and Florence.",
+      "Start and finish in Rome on a 12-day circuit that threads together Venice, Bavaria, the Rhine, Amsterdam, Paris, the Swiss Alps and Tuscany. A strong choice when you want variety without committing to a full three-week tour.",
     image: europeEscapeImage,
     sourceImageUrl:
       "https://images.ctfassets.net/huwbudysxepr/7sSQfA0OEghr4EVbrXbvBm/719c44b092b54d54df4281f4090e9de1/Europe-Escape.jpg",
@@ -197,7 +197,7 @@ export default [
     region: "International",
     name: "Europe Explorer",
     description:
-      "An 18-day route across Western Europe, the Mediterranean and the Alps, linking Amsterdam, Paris, Barcelona, Rome, Venice and Switzerland.",
+      "Made for travellers who want the fuller European story. Over 18 days, move from Amsterdam and Paris to Barcelona and the French Riviera, then continue through Italy, Venice, Switzerland and Germany’s Black Forest.",
     image: europeExplorerImage,
     sourceImageUrl:
       "https://images.ctfassets.net/huwbudysxepr/57PEzzq7l1v89BET8vIF6d/075a369badb55aede4b94bf7ee353923/Europe-Explorer.jpg",
@@ -272,7 +272,7 @@ export default [
     region: "International",
     name: "Eastern USA & Canada Escape",
     description:
-      "A cross-border journey from New York through New England, Quebec, Ontario, Niagara Falls, Detroit, Pittsburgh, Washington and Philadelphia.",
+      "Follow the eastern side of the USA and Canada from New York to Boston, French-speaking Quebec, Toronto and Niagara Falls, then return through Detroit, Pittsburgh, Washington and Philadelphia. Big cities and open landscapes share the route.",
     image: easternUsaCanadaImage,
     sourceImageUrl:
       "https://images.ctfassets.net/huwbudysxepr/4T5nhx6EYDLG0omKtGYth3/27b5342e231e3c6e97414ff9c92a3fe6/Eastern-USA-Canada-Escape.jpg",
@@ -337,7 +337,7 @@ export default [
     region: "International",
     name: "Eastern USA & Canada Escape incl. New York",
     description:
-      "The extended Eastern USA and Canada route adds three days in New York before continuing through Boston, Quebec, Ontario and the US East Coast.",
+      "Give New York the time it deserves before setting out across the eastern USA and Canada. Three city days lead into Boston, Quebec, Toronto and Niagara Falls, followed by Detroit, Pittsburgh, Washington and Philadelphia.",
     image: easternUsaCanadaNewYorkImage,
     sourceImageUrl:
       "https://images.ctfassets.net/huwbudysxepr/3yFpXtKPnb625erhQIjjKd/9e8a8566715cddb1300ec8bd8d71e111/Eastern-USA-Canada-Escape-New-York.jpg",
