@@ -1,5 +1,5 @@
-import { useEffect, useMemo, useState } from 'react';
-import { ArrowLeft, ArrowRight, CalendarDays, Camera, Check, ChevronDown, ChevronRight, CircleCheck, Clock3, Compass, ExternalLink, Headphones, Heart, Hotel, Languages, Mail, MapPin, Menu, MessageCircle, Phone, Search, ShieldCheck, Star, Users, X } from 'lucide-react';
+import { createContext, useContext, useEffect, useMemo, useRef, useState } from 'react';
+import { ArrowLeft, ArrowRight, CalendarDays, Camera, Check, ChevronDown, ChevronRight, CircleCheck, Clock3, Compass, ExternalLink, Globe2, Headphones, Heart, Hotel, Languages, Mail, MapPin, Menu, MessageCircle, Phone, Search, ShieldCheck, Star, Users, X } from 'lucide-react';
 import currentTours from './data/tourradar.json';
 import officialTours from './data/official-tours.json';
 import internationalTours from './data/international-tours.js';
@@ -14,6 +14,38 @@ const CONTACT = {
   email: 'info@vijayindiatours.com',
   address: '2nd Floor, Shop 20–21, Khatipura Road, Chand Bihari Nagar, Jhotwara, Jaipur 302012',
 };
+
+const MARKETS = {
+  india: {
+    code: 'india',
+    name: 'India',
+    flag: '🇮🇳',
+    currency: 'INR',
+    currencyName: 'Indian rupees',
+    phoneCode: '+91',
+    phonePlaceholder: '98765 43210',
+    locale: 'en-IN',
+    usdRate: 96.2,
+  },
+  usa: {
+    code: 'usa',
+    name: 'United States',
+    shortName: 'USA',
+    flag: '🇺🇸',
+    currency: 'USD',
+    currencyName: 'US dollars',
+    phoneCode: '+1',
+    phonePlaceholder: '(555) 123-4567',
+    locale: 'en-US',
+    usdRate: 1,
+  },
+};
+
+const MarketContext = createContext(MARKETS.india);
+
+function useMarket() {
+  return useContext(MarketContext);
+}
 
 const categoryRules = [
   ['Food & Culture', /food|cuisine|village|country side|life in india/i],
@@ -270,8 +302,14 @@ const internationalVideo = internationalMontage;
 const indiaVideo = 'https://video.gumlet.io/6808bf5ac1d254855e3aee9d/681a10d271185aee8bc1688f/main.mp4';
 const months = ['Jan', 'Feb', 'Mar', 'Apr', 'May', 'Jun', 'Jul', 'Aug', 'Sep', 'Oct', 'Nov', 'Dec'];
 
-function money(value) {
-  return value ? `US $${Number(value).toLocaleString('en-US')}` : 'Price on request';
+function money(value, market) {
+  if (!value) return 'Price on request';
+  const convertedValue = market.currency === 'INR' ? Math.round((Number(value) * market.usdRate) / 100) * 100 : Number(value);
+  return new Intl.NumberFormat(market.locale, {
+    style: 'currency',
+    currency: market.currency,
+    maximumFractionDigits: 0,
+  }).format(convertedValue);
 }
 
 function dateLabel(item) {
@@ -295,9 +333,10 @@ function Logo({ light = false }) {
   );
 }
 
-function Header({ onEnquire }) {
+function Header({ onEnquire, onMarketChange }) {
   const [open, setOpen] = useState(false);
   const [drop, setDrop] = useState(false);
+  const market = useMarket();
   const categories = categoryRules.slice(0, 8).map(([name]) => name);
   return (
     <header className="site-header">
@@ -310,13 +349,24 @@ function Header({ onEnquire }) {
           <a href="#popular">Popular Tours</a>
           <a href="#why">About Us</a>
           <a href="#contact">Contact</a>
+          <button className="market-trigger" onClick={onMarketChange} aria-label={`Change country. Current country: ${market.name}`}>
+            <span>{market.flag}</span>
+            {market.shortName || market.name} · {market.currency}
+            <ChevronDown size={14} />
+          </button>
           <a className="phone-pill" href={CONTACT.phoneHref}>
             <Phone size={16} /> {CONTACT.phone}
           </a>
         </nav>
-        <button className="mobile-menu" onClick={() => setOpen(!open)} aria-label="Toggle menu">
-          {open ? <X /> : <Menu />}
-        </button>
+        <div className="mobile-header-actions">
+          <button className="market-trigger mobile-market" onClick={onMarketChange} aria-label={`Change country. Current country: ${market.name}`}>
+            <span>{market.flag}</span>
+            {market.currency}
+          </button>
+          <button className="mobile-menu" onClick={() => setOpen(!open)} aria-label="Toggle menu">
+            {open ? <X /> : <Menu />}
+          </button>
+        </div>
       </div>
       <div className={`navband ${open ? 'open' : ''}`}>
         <nav className="shell mainnav">
@@ -425,6 +475,7 @@ function TrustStrip() {
 }
 
 function JourneyMiniCard({ item, onOpen }) {
+  const market = useMarket();
   return (
     <button className="journey-mini-card" onClick={() => onOpen(item)} aria-label={`View ${item.name}`}>
       <img src={item.image} alt="" loading="lazy" />
@@ -434,7 +485,7 @@ function JourneyMiniCard({ item, onOpen }) {
           {item.duration} DAYS · {categoryFor(item).toUpperCase()}
         </small>
         <strong>{item.name}</strong>
-        <i>{item.price ? `From ${money(item.price)}` : 'Price on request'}</i>
+        <i>{item.price ? `From ${money(item.price, market)}` : 'Price on request'}</i>
       </span>
       <span className="journey-card-arrow">
         <ArrowRight />
@@ -528,6 +579,7 @@ function QuickLinks({ onDestination }) {
 }
 
 function PackageCard({ item, onOpen }) {
+  const market = useMarket();
   return (
     <article className="trip-card">
       <button className="trip-image" onClick={() => onOpen(item)} aria-label={`Open ${item.name}`}>
@@ -556,7 +608,7 @@ function PackageCard({ item, onOpen }) {
         <div className="trip-bottom">
           <div>
             <small>Starting from</small>
-            <strong>{money(item.price)}</strong>
+            <strong>{money(item.price, market)}</strong>
             {item.price && <small>per person</small>}
           </div>
           <button onClick={() => onOpen(item)}>
@@ -834,6 +886,8 @@ function Gallery() {
 
 function ContactForm({ prefill = '' }) {
   const [sent, setSent] = useState(false);
+  const market = useMarket();
+  const earliestTravelDate = new Date().toISOString().slice(0, 10);
   if (sent)
     return (
       <div className="form-success">
@@ -846,7 +900,9 @@ function ContactForm({ prefill = '' }) {
   const submit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
-    const message = [`Hello Vijay India Tours, I’d like help planning a trip.`, `Name: ${data.get('name')}`, `Phone: ${data.get('phone')}`, `Email: ${data.get('email') || 'Not provided'}`, `Preferred dates: ${data.get('dates') || 'Flexible'}`, `Trip idea: ${data.get('message') || 'I’d like help choosing the right tour.'}`].join('\n');
+    const selectedDate = data.get('dates');
+    const dateText = selectedDate ? new Intl.DateTimeFormat(market.locale, { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(`${selectedDate}T12:00:00`)) : 'Flexible';
+    const message = [`Hello Vijay India Tours, I’d like help planning a trip.`, `Name: ${data.get('name')}`, `Country: ${market.name}`, `Phone: ${market.phoneCode} ${data.get('phone')}`, `Email: ${data.get('email') || 'Not provided'}`, `Preferred departure: ${dateText}`, `Trip idea: ${data.get('message') || 'I’d like help choosing the right tour.'}`].join('\n');
     window.open(`https://wa.me/917976064160?text=${encodeURIComponent(message)}`, '_blank', 'noopener,noreferrer');
     setSent(true);
   };
@@ -857,11 +913,15 @@ function ContactForm({ prefill = '' }) {
       </label>
       <div className="form-row">
         <label>
-          Phone / WhatsApp *<input name="phone" required placeholder="+91" />
+          Phone / WhatsApp *
+          <span className="phone-input">
+            <span className="phone-prefix">{market.flag} {market.phoneCode}</span>
+            <input name="phone" type="tel" inputMode="tel" required placeholder={market.phonePlaceholder} aria-label={`Phone number after ${market.phoneCode}`} />
+          </span>
         </label>
         <label>
-          Preferred dates
-          <input name="dates" placeholder="e.g. November 2026" />
+          Preferred departure date
+          <input name="dates" type="date" min={earliestTravelDate} />
         </label>
       </div>
       <label>
@@ -877,13 +937,13 @@ function ContactForm({ prefill = '' }) {
       </button>
       <small>
         <ShieldCheck />
-        You can review and edit the message before sending it.
+        Your enquiry is set to {market.name} ({market.currency}). You can review the message before sending it.
       </small>
     </form>
   );
 }
 
-function Contact() {
+function Contact({ prefill = '' }) {
   return (
     <section className="contact" id="contact">
       <div className="shell contact-grid">
@@ -908,7 +968,7 @@ function Contact() {
         <div className="contact-form">
           <p className="kicker">START A CONVERSATION</p>
           <h2>Tell us what you’re imagining</h2>
-          <ContactForm />
+          <ContactForm key={prefill} prefill={prefill} />
         </div>
       </div>
     </section>
@@ -962,6 +1022,79 @@ function Footer() {
   );
 }
 
+function CountrySelector({ open, selectedCode, onSelect, onClose }) {
+  useEffect(() => {
+    if (!open) return undefined;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
+  if (!open) return null;
+  return (
+    <div className="modal market-modal" role="dialog" aria-modal="true" aria-labelledby="market-title" onMouseDown={(event) => selectedCode && event.target === event.currentTarget && onClose()}>
+      <div className="market-card">
+        {selectedCode && (
+          <button className="modal-close" onClick={onClose} aria-label="Close country selector">
+            <X />
+          </button>
+        )}
+        <div className="market-icon">
+          <Globe2 />
+        </div>
+        <p className="kicker">WELCOME TO VIJAY INDIA TOURS</p>
+        <h2 id="market-title">Where are you travelling from?</h2>
+        <p>Choose your country to see every package in the right currency and use the correct phone code when you enquire.</p>
+        <div className="market-options">
+          {Object.values(MARKETS).map((market) => (
+            <button className={selectedCode === market.code ? 'selected' : ''} key={market.code} onClick={() => onSelect(market.code)}>
+              <span className="market-flag">{market.flag}</span>
+              <span>
+                <strong>{market.name}</strong>
+                <small>Prices in {market.currency} · Phone {market.phoneCode}</small>
+              </span>
+              <i>{selectedCode === market.code ? <Check /> : <ArrowRight />}</i>
+            </button>
+          ))}
+        </div>
+        <small className="market-note">Package prices are guide prices. India prices are converted to INR for easier comparison, and every final quote is confirmed before payment.</small>
+      </div>
+    </div>
+  );
+}
+
+function TourFollowup({ item, onClose, onContact }) {
+  useEffect(() => {
+    if (!item) return undefined;
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [item]);
+
+  if (!item) return null;
+  return (
+    <div className="modal followup-modal" role="dialog" aria-modal="true" aria-labelledby="followup-title" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
+      <div className="followup-card">
+        <button className="modal-close" onClick={onClose} aria-label="Close">
+          <X />
+        </button>
+        <div className="followup-heart">
+          <Heart fill="currentColor" />
+        </div>
+        <p className="kicker">A TRIP WORTH CONSIDERING</p>
+        <h2 id="followup-title">Did “{item.name}” feel right for you?</h2>
+        <p>We can check the best dates, suitable hotels and current price for your group. Tell us what you need and our Jaipur team will help you decide.</p>
+        <button className="followup-primary" onClick={onContact}>
+          Check dates & price <ArrowRight />
+        </button>
+        <button className="followup-secondary" onClick={onClose}>Keep exploring</button>
+      </div>
+    </div>
+  );
+}
+
 function EnquiryModal({ open, onClose, prefill }) {
   useEffect(() => {
     document.body.style.overflow = open ? 'hidden' : '';
@@ -999,6 +1132,7 @@ function Fact({ icon: Icon, label, value }) {
 
 function CurrentDetail({ item, onBack, onEnquire }) {
   const isInternational = item.type === 'international';
+  const market = useMarket();
   return (
     <main className="detail-page">
       <section className="detail-hero" style={{ backgroundImage: `url(${item.image})` }}>
@@ -1159,8 +1293,8 @@ function CurrentDetail({ item, onBack, onEnquire }) {
         </div>
         <aside className="booking-card">
           <p>FROM</p>
-          <strong>{money(item.price)}</strong>
-          <span>{item.price ? `per person · ${isInternational ? 'guide price' : 'published price'}` : 'Ask us for the latest departure price'}</span>
+          <strong>{money(item.price, market)}</strong>
+          <span>{item.price ? `per person · ${market.currency === 'INR' ? 'indicative INR price' : isInternational ? 'guide price' : 'published price'}` : 'Ask us for the latest departure price'}</span>
           <div className="booking-line">
             <CalendarDays />
             <p>
@@ -1184,6 +1318,7 @@ function CurrentDetail({ item, onBack, onEnquire }) {
 }
 
 function OfficialDetail({ item, onBack, onEnquire }) {
+  const market = useMarket();
   return (
     <main className="detail-page">
       <section className="detail-hero" style={{ backgroundImage: `url(${item.image})` }}>
@@ -1275,8 +1410,8 @@ function OfficialDetail({ item, onBack, onEnquire }) {
         </div>
         <aside className="booking-card">
           <p>GUIDE PRICE FROM</p>
-          <strong>{money(item.price)}</strong>
-          <span>per person · final quote depends on your dates</span>
+          <strong>{money(item.price, market)}</strong>
+          <span>per person · {market.currency === 'INR' ? 'indicative INR price' : 'final quote depends on your dates'}</span>
           <div className="booking-line">
             <CalendarDays />
             <p>
@@ -1300,15 +1435,29 @@ export default function App() {
   const [selectedOfficial, setSelectedOfficial] = useState(null);
   const [modal, setModal] = useState(false);
   const [prefill, setPrefill] = useState('');
+  const [contactPrefill, setContactPrefill] = useState('');
+  const [marketCode, setMarketCode] = useState('');
+  const [marketOpen, setMarketOpen] = useState(true);
+  const [followupItem, setFollowupItem] = useState(null);
   const [requestedCategory, setRequestedCategory] = useState('');
   const [requestedDestination, setRequestedDestination] = useState('');
+  const viewedItem = useRef(null);
+  const market = MARKETS[marketCode] || MARKETS.india;
   useEffect(() => {
     const sync = () => {
       const id = location.hash.match(/^#tour\/(.+)$/)?.[1];
       const internationalId = location.hash.match(/^#international\/(.+)$/)?.[1];
       const officialId = location.hash.match(/^#official\/(.+)$/)?.[1];
-      setSelected(currentListings.find((tour) => tour.id === id) || internationalListings.find((tour) => tour.id === internationalId) || null);
-      setSelectedOfficial(officialListings.find((tour) => tour.id === officialId) || null);
+      const currentItem = currentListings.find((tour) => tour.id === id) || internationalListings.find((tour) => tour.id === internationalId) || null;
+      const officialItem = officialListings.find((tour) => tour.id === officialId) || null;
+      const detailItem = currentItem || officialItem;
+      setSelected(currentItem);
+      setSelectedOfficial(officialItem);
+      if (detailItem) viewedItem.current = detailItem;
+      else if (viewedItem.current) {
+        setFollowupItem(viewedItem.current);
+        viewedItem.current = null;
+      }
       if (id || internationalId || officialId) scrollTo({ top: 0 });
     };
     sync();
@@ -1321,8 +1470,6 @@ export default function App() {
   };
   const back = () => {
     location.hash = 'packages';
-    setSelected(null);
-    setSelectedOfficial(null);
     setTimeout(() => document.getElementById('packages')?.scrollIntoView(), 30);
   };
   const enquire = (message = '') => {
@@ -1339,50 +1486,67 @@ export default function App() {
     location.hash = 'packages';
     setTimeout(() => document.getElementById('packages')?.scrollIntoView({ behavior: 'smooth' }), 30);
   };
-  if (selected)
-    return (
+  const selectMarket = (code) => {
+    setMarketCode(code);
+    setMarketOpen(false);
+  };
+  const followupToContact = () => {
+    setContactPrefill(`I was looking at “${followupItem.name}”. Please share the best dates and current price for my group.`);
+    setFollowupItem(null);
+    location.hash = 'contact';
+    setTimeout(() => document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' }), 30);
+  };
+
+  let page;
+  if (selected) {
+    page = (
       <>
-        <Header onEnquire={() => enquire()} />
+        <Header onEnquire={() => enquire()} onMarketChange={() => setMarketOpen(true)} />
         <CurrentDetail item={selected} onBack={back} onEnquire={enquire} />
         <Footer />
-        <EnquiryModal open={modal} onClose={() => setModal(false)} prefill={prefill} />
       </>
     );
-  if (selectedOfficial)
-    return (
+  } else if (selectedOfficial) {
+    page = (
       <>
-        <Header onEnquire={() => enquire()} />
+        <Header onEnquire={() => enquire()} onMarketChange={() => setMarketOpen(true)} />
         <OfficialDetail item={selectedOfficial} onBack={back} onEnquire={enquire} />
         <Footer />
-        <EnquiryModal open={modal} onClose={() => setModal(false)} prefill={prefill} />
       </>
     );
+  } else {
+    page = (
+      <>
+        <Header onEnquire={() => enquire()} onMarketChange={() => setMarketOpen(true)} />
+        <main>
+          <Hero onExplore={() => document.getElementById('international-trips')?.scrollIntoView({ behavior: 'smooth' })} />
+          <TrustStrip />
+          <JourneyShowcase onOpen={open} onCategory={chooseCategory} />
+          <QuickLinks onDestination={chooseDestination} />
+          <Popular onOpen={open} />
+          <Collections onCategory={chooseCategory} />
+          <AllPackages onOpen={open} requestedCategory={requestedCategory} clearRequestedCategory={() => setRequestedCategory('')} requestedDestination={requestedDestination} clearRequestedDestination={() => setRequestedDestination('')} />
+          <WhyUs />
+          <Gallery />
+          <Contact prefill={contactPrefill} />
+        </main>
+        <Footer />
+        <div className="floating">
+          <button onClick={() => enquire()}>
+            <Phone />
+            <span>Request a call back</span>
+          </button>
+        </div>
+      </>
+    );
+  }
+
   return (
-    <>
-      <Header onEnquire={() => enquire()} />
-      <main>
-        <Hero onExplore={() => document.getElementById('international-trips')?.scrollIntoView({ behavior: 'smooth' })} />
-        <TrustStrip />
-        <JourneyShowcase onOpen={open} onCategory={chooseCategory} />
-        <QuickLinks onDestination={chooseDestination} />
-        <Popular onOpen={open} />
-        <Collections onCategory={chooseCategory} />
-        <AllPackages onOpen={open} requestedCategory={requestedCategory} clearRequestedCategory={() => setRequestedCategory('')} requestedDestination={requestedDestination} clearRequestedDestination={() => setRequestedDestination('')} />
-        <WhyUs />
-        <Gallery />
-        <Contact />
-      </main>
-      <Footer />
-      <div className="floating">
-        <button onClick={() => enquire()}>
-          <Phone />
-          <span>Request a call back</span>
-        </button>
-        <a href="https://wa.me/917976064160" target="_blank" rel="noreferrer" aria-label="WhatsApp Vijay India Tours">
-          <MessageCircle />
-        </a>
-      </div>
+    <MarketContext.Provider value={market}>
+      {page}
+      <CountrySelector open={marketOpen} selectedCode={marketCode} onSelect={selectMarket} onClose={() => marketCode && setMarketOpen(false)} />
+      <TourFollowup item={followupItem} onClose={() => setFollowupItem(null)} onContact={followupToContact} />
       <EnquiryModal open={modal} onClose={() => setModal(false)} prefill={prefill} />
-    </>
+    </MarketContext.Provider>
   );
 }
