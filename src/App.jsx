@@ -15,6 +15,7 @@ const CONTACT = {
   address: '2nd Floor, Shop 20–21, Khatipura Road, Chand Bihari Nagar, Jhotwara, Jaipur 302012',
 };
 
+// Indicative USD conversions derived from the ECB reference table dated 28 September 2026.
 const MARKETS = {
   india: {
     code: 'india',
@@ -25,7 +26,7 @@ const MARKETS = {
     phoneCode: '+91',
     phonePlaceholder: '98765 43210',
     locale: 'en-IN',
-    usdRate: 96.2,
+    usdRate: 95.98,
   },
   usa: {
     code: 'usa',
@@ -38,6 +39,51 @@ const MARKETS = {
     phonePlaceholder: '(555) 123-4567',
     locale: 'en-US',
     usdRate: 1,
+  },
+  australia: {
+    code: 'australia',
+    name: 'Australia',
+    flag: '🇦🇺',
+    currency: 'AUD',
+    currencyName: 'Australian dollars',
+    phoneCode: '+61',
+    phonePlaceholder: '412 345 678',
+    locale: 'en-AU',
+    usdRate: 1.4237,
+  },
+  germany: {
+    code: 'germany',
+    name: 'Germany',
+    flag: '🇩🇪',
+    currency: 'EUR',
+    currencyName: 'euros',
+    phoneCode: '+49',
+    phonePlaceholder: '1512 3456789',
+    locale: 'de-DE',
+    usdRate: 0.8789,
+  },
+  london: {
+    code: 'london',
+    name: 'London, UK',
+    shortName: 'London',
+    flag: '🇬🇧',
+    currency: 'GBP',
+    currencyName: 'pounds sterling',
+    phoneCode: '+44',
+    phonePlaceholder: '7700 900123',
+    locale: 'en-GB',
+    usdRate: 0.754,
+  },
+  netherlands: {
+    code: 'netherlands',
+    name: 'Netherlands',
+    flag: '🇳🇱',
+    currency: 'EUR',
+    currencyName: 'euros',
+    phoneCode: '+31',
+    phonePlaceholder: '6 12345678',
+    locale: 'nl-NL',
+    usdRate: 0.8789,
   },
 };
 
@@ -333,7 +379,7 @@ function Logo({ light = false }) {
   );
 }
 
-function Header({ onEnquire, onMarketChange }) {
+function Header({ onEnquire, onMarketChange, onSearch }) {
   const [open, setOpen] = useState(false);
   const [drop, setDrop] = useState(false);
   const market = useMarket();
@@ -349,6 +395,9 @@ function Header({ onEnquire, onMarketChange }) {
           <a href="#popular">Popular Tours</a>
           <a href="#why">About Us</a>
           <a href="#contact">Contact</a>
+          <button className="header-search" onClick={onSearch}>
+            <Search size={16} /> Search tours
+          </button>
           <button className="market-trigger" onClick={onMarketChange} aria-label={`Change country. Current country: ${market.name}`}>
             <span>{market.flag}</span>
             {market.shortName || market.name} · {market.currency}
@@ -359,6 +408,9 @@ function Header({ onEnquire, onMarketChange }) {
           </a>
         </nav>
         <div className="mobile-header-actions">
+          <button className="mobile-search" onClick={onSearch} aria-label="Search tours">
+            <Search />
+          </button>
           <button className="market-trigger mobile-market" onClick={onMarketChange} aria-label={`Change country. Current country: ${market.name}`}>
             <span>{market.flag}</span>
             {market.currency}
@@ -884,6 +936,88 @@ function Gallery() {
   );
 }
 
+const travellerReviews = [
+  {
+    name: 'Chuck',
+    date: 'February 2020',
+    tour: 'Golden Triangle & Ranthambore',
+    quote: 'The tour, service, and responsiveness were great. We would definitely use Vijay India Tours again and recommend them to others.',
+    image: 'https://cdn.tourradar.com/s3/review/720/261086_2df73a6e.jpg',
+    imageAlt: 'Travellers posing near horses and a heritage arch in Rajasthan',
+    source: 'https://www.tourradar.com/t/110582',
+  },
+  {
+    name: 'Carol',
+    date: 'June 2019',
+    tour: 'India’s Tiger Trail',
+    quote: 'Fantastic experience—the trip overall was very organized. Siddharth was a knowledgeable and caring guide.',
+    image: 'https://cdn.tourradar.com/s3/review/480/95391_ab1e6b46.jpg',
+    imageAlt: 'A colourful traditional dance performance photographed by travellers in India',
+    source: 'https://www.tourradar.com/t/110672',
+  },
+  {
+    name: 'MarieSmith',
+    date: 'July 2019',
+    tour: 'Indian Saga',
+    quote: 'Good and smooth travel throughout India. We were a group of 7 and were in safe hands.',
+    image: 'https://cdn.tourradar.com/s3/review/720/81898_6b76d1f7.jpg',
+    imageAlt: 'A group of travellers on a jeep safari through an Indian national park',
+    source: 'https://www.tourradar.com/t/110749',
+  },
+];
+
+function Reviews() {
+  return (
+    <section className="reviews" id="reviews">
+      <div className="shell">
+        <div className="reviews-heading">
+          <div>
+            <p className="kicker">VERIFIED TRAVELLER REVIEWS</p>
+            <h2>What stays with people after the journey</h2>
+            <p>Independent reviews from guests who travelled with Vijay India Tours, published and verified by TourRadar.</p>
+          </div>
+          <a href="https://www.tourradar.com/o/vijay-india-tours" target="_blank" rel="noreferrer">
+            <span className="review-score">5.0</span>
+            <span>
+              <strong>Excellent</strong>
+              <small>36 verified reviews</small>
+            </span>
+            <ExternalLink />
+          </a>
+        </div>
+        <div className="review-grid">
+          {travellerReviews.map((review) => (
+            <article className="review-card" key={review.name}>
+              <div className="review-photo">
+                <img src={review.image} alt={review.imageAlt} loading="lazy" />
+                <span>TRAVELLER MOMENT</span>
+              </div>
+              <div className="review-copy">
+                <div className="review-stars" aria-label="5 out of 5 stars">
+                  {[1, 2, 3, 4, 5].map((star) => (
+                    <Star key={star} fill="currentColor" />
+                  ))}
+                </div>
+                <blockquote>“{review.quote}”</blockquote>
+                <div className="review-person">
+                  <span>{review.name.charAt(0)}</span>
+                  <div>
+                    <strong>{review.name}</strong>
+                    <small>{review.tour} · {review.date}</small>
+                  </div>
+                  <a href={review.source} target="_blank" rel="noreferrer" aria-label={`Read ${review.name}'s verified review on TourRadar`}>
+                    <ExternalLink />
+                  </a>
+                </div>
+              </div>
+            </article>
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+
 function ContactForm({ prefill = '' }) {
   const [sent, setSent] = useState(false);
   const market = useMarket();
@@ -1045,7 +1179,7 @@ function CountrySelector({ open, selectedCode, onSelect, onClose }) {
         </div>
         <p className="kicker">WELCOME TO VIJAY INDIA TOURS</p>
         <h2 id="market-title">Where are you travelling from?</h2>
-        <p>Choose your country to see every package in the right currency and use the correct phone code when you enquire.</p>
+        <p>Choose your location to see every package in the right currency and use the correct phone code when you enquire.</p>
         <div className="market-options">
           {Object.values(MARKETS).map((market) => (
             <button className={selectedCode === market.code ? 'selected' : ''} key={market.code} onClick={() => onSelect(market.code)}>
@@ -1058,7 +1192,78 @@ function CountrySelector({ open, selectedCode, onSelect, onClose }) {
             </button>
           ))}
         </div>
-        <small className="market-note">Package prices are guide prices. India prices are converted to INR for easier comparison, and every final quote is confirmed before payment.</small>
+        <small className="market-note">Package prices are converted from published USD guide prices for easier comparison. Every final quote is confirmed in your selected currency before payment.</small>
+      </div>
+    </div>
+  );
+}
+
+function SearchModal({ open, onClose, onOpen }) {
+  const [query, setQuery] = useState('');
+  const market = useMarket();
+  const matches = useMemo(() => {
+    const searchTerm = query.trim().toLowerCase();
+    if (!searchTerm) return popularListings.slice(0, 6);
+    return allListings.filter((item) => listingText(item).includes(searchTerm));
+  }, [query]);
+  const visibleMatches = matches.slice(0, 8);
+
+  useEffect(() => {
+    if (!open) return undefined;
+    setQuery('');
+    document.body.style.overflow = 'hidden';
+    return () => {
+      document.body.style.overflow = '';
+    };
+  }, [open]);
+
+  if (!open) return null;
+  const chooseTour = (item) => {
+    onClose();
+    onOpen(item);
+  };
+  return (
+    <div className="modal search-modal" role="dialog" aria-modal="true" aria-labelledby="search-title" onMouseDown={(event) => event.target === event.currentTarget && onClose()}>
+      <div className="search-modal-card">
+        <button className="modal-close" onClick={onClose} aria-label="Close tour search">
+          <X />
+        </button>
+        <p className="kicker">SEARCH ALL 89 JOURNEYS</p>
+        <h2 id="search-title">Where would you like to go?</h2>
+        <div className="global-search-input">
+          <Search />
+          <input autoFocus value={query} onChange={(event) => setQuery(event.target.value)} placeholder="Try Jaipur, tiger safari, Kerala or Europe" aria-label="Search tours" />
+          {query && (
+            <button onClick={() => setQuery('')} aria-label="Clear search">
+              <X />
+            </button>
+          )}
+        </div>
+        <div className="search-result-heading">
+          <strong>{query ? `${matches.length} matching ${matches.length === 1 ? 'journey' : 'journeys'}` : 'Popular right now'}</strong>
+          <span>Prices in {market.currency}</span>
+        </div>
+        {visibleMatches.length ? (
+          <div className="search-results">
+            {visibleMatches.map((item) => (
+              <button key={`${item.type}-${item.id}`} onClick={() => chooseTour(item)}>
+                <img src={item.image || currentTours[0].image} alt="" />
+                <span>
+                  <small>{categoryFor(item)} · {item.duration ? `${item.duration} days` : 'Flexible'}</small>
+                  <strong>{item.name}</strong>
+                  <i>{money(item.price, market)}</i>
+                </span>
+                <ArrowRight />
+              </button>
+            ))}
+          </div>
+        ) : (
+          <div className="search-empty">
+            <Search />
+            <h3>No journey found</h3>
+            <p>Try a city, region or experience such as “Rajasthan” or “wildlife”.</p>
+          </div>
+        )}
       </div>
     </div>
   );
@@ -1294,7 +1499,7 @@ function CurrentDetail({ item, onBack, onEnquire }) {
         <aside className="booking-card">
           <p>FROM</p>
           <strong>{money(item.price, market)}</strong>
-          <span>{item.price ? `per person · ${market.currency === 'INR' ? 'indicative INR price' : isInternational ? 'guide price' : 'published price'}` : 'Ask us for the latest departure price'}</span>
+          <span>{item.price ? `per person · ${market.currency !== 'USD' ? `indicative ${market.currency} price` : isInternational ? 'guide price' : 'published price'}` : 'Ask us for the latest departure price'}</span>
           <div className="booking-line">
             <CalendarDays />
             <p>
@@ -1411,7 +1616,7 @@ function OfficialDetail({ item, onBack, onEnquire }) {
         <aside className="booking-card">
           <p>GUIDE PRICE FROM</p>
           <strong>{money(item.price, market)}</strong>
-          <span>per person · {market.currency === 'INR' ? 'indicative INR price' : 'final quote depends on your dates'}</span>
+          <span>per person · {market.currency !== 'USD' ? `indicative ${market.currency} price` : 'final quote depends on your dates'}</span>
           <div className="booking-line">
             <CalendarDays />
             <p>
@@ -1438,6 +1643,7 @@ export default function App() {
   const [contactPrefill, setContactPrefill] = useState('');
   const [marketCode, setMarketCode] = useState('');
   const [marketOpen, setMarketOpen] = useState(true);
+  const [searchOpen, setSearchOpen] = useState(false);
   const [followupItem, setFollowupItem] = useState(null);
   const [requestedCategory, setRequestedCategory] = useState('');
   const [requestedDestination, setRequestedDestination] = useState('');
@@ -1501,7 +1707,7 @@ export default function App() {
   if (selected) {
     page = (
       <>
-        <Header onEnquire={() => enquire()} onMarketChange={() => setMarketOpen(true)} />
+        <Header onEnquire={() => enquire()} onMarketChange={() => setMarketOpen(true)} onSearch={() => setSearchOpen(true)} />
         <CurrentDetail item={selected} onBack={back} onEnquire={enquire} />
         <Footer />
       </>
@@ -1509,7 +1715,7 @@ export default function App() {
   } else if (selectedOfficial) {
     page = (
       <>
-        <Header onEnquire={() => enquire()} onMarketChange={() => setMarketOpen(true)} />
+        <Header onEnquire={() => enquire()} onMarketChange={() => setMarketOpen(true)} onSearch={() => setSearchOpen(true)} />
         <OfficialDetail item={selectedOfficial} onBack={back} onEnquire={enquire} />
         <Footer />
       </>
@@ -1517,7 +1723,7 @@ export default function App() {
   } else {
     page = (
       <>
-        <Header onEnquire={() => enquire()} onMarketChange={() => setMarketOpen(true)} />
+        <Header onEnquire={() => enquire()} onMarketChange={() => setMarketOpen(true)} onSearch={() => setSearchOpen(true)} />
         <main>
           <Hero onExplore={() => document.getElementById('international-trips')?.scrollIntoView({ behavior: 'smooth' })} />
           <TrustStrip />
@@ -1528,6 +1734,7 @@ export default function App() {
           <AllPackages onOpen={open} requestedCategory={requestedCategory} clearRequestedCategory={() => setRequestedCategory('')} requestedDestination={requestedDestination} clearRequestedDestination={() => setRequestedDestination('')} />
           <WhyUs />
           <Gallery />
+          <Reviews />
           <Contact prefill={contactPrefill} />
         </main>
         <Footer />
@@ -1545,6 +1752,7 @@ export default function App() {
     <MarketContext.Provider value={market}>
       {page}
       <CountrySelector open={marketOpen} selectedCode={marketCode} onSelect={selectMarket} onClose={() => marketCode && setMarketOpen(false)} />
+      <SearchModal open={searchOpen} onClose={() => setSearchOpen(false)} onOpen={open} />
       <TourFollowup item={followupItem} onClose={() => setFollowupItem(null)} onContact={followupToContact} />
       <EnquiryModal open={modal} onClose={() => setModal(false)} prefill={prefill} />
     </MarketContext.Provider>
