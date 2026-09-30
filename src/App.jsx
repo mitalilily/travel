@@ -4,7 +4,7 @@ import currentTours from './data/tourradar.json';
 import officialTours from './data/official-tours.json';
 import internationalTours from './data/international-tours.js';
 import audit from './data/catalog-audit.json';
-import logo from './assets/vijay-logo.png';
+import logo from './assets/oamx-logo-transparent.png';
 import destinationIconAtlas from './assets/vijay-destination-icons.png';
 import internationalMontage from './assets/international-montage.mp4';
 
@@ -373,8 +373,8 @@ function matchesDestination(item, destination) {
 
 function Logo({ light = false }) {
   return (
-    <a className={`logo ${light ? 'logo-light' : ''}`} href="#home" aria-label="Vijay India Tours home">
-      <img src={logo} alt="Vijay India Tours" />
+    <a className={`logo ${light ? 'logo-light' : ''}`} href="#home" aria-label="O-A-M-X 99 LLP home">
+      <img src={logo} alt="O-A-M-X 99 LLP — Innovation, Integrity, Opportunity" />
     </a>
   );
 }
